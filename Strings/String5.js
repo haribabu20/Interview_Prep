@@ -1,19 +1,16 @@
 // ✅ 5️⃣ Count the occurrences of each character in a string.
 
 
-const countCharacters = (str) => {
-  let count = {};  // Creating an empty object
-
-  for(let i=0; i<str.length; i++) {
-    let char = str[i];  // Taking each character from the string
-
-    if(count[char]) {  
-      count[char]++;   // If character already exists, increase the count
-    } else {
-      count[char] = 1; // If character doesn't exist, set count as 1
+const countCharacters = (word) => {
+  let count = {};
+  for(let i=0; i<word.length; i++){
+    if(count[word[i]]){         // instead of word[i], we can assign a value like char. So wherever we have word[i], we can replace that with char.
+      count[word[i]]++;         // If character already exists, increase the count
+    }
+    else{
+      count[word[i]] = 1;       // If character doesn't exist, set count as 1
     }
   }
-
   return count;
 }
 
@@ -26,7 +23,8 @@ console.log(countCharacters("programming"));
 
 Explanation:
 
-let obj = {count:1};
+let obj = {};
+obj["count"] = 1;
 obj["count"]++;
 console.log(obj["count"]); // 2
 

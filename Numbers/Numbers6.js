@@ -7,7 +7,6 @@ const sumOfDigits = (num) => {
     sum += digit;
     num = Math.floor(num/10);
   }
-  debugger;
   return sum
 }
 

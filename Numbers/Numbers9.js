@@ -1,5 +1,9 @@
 // 🔥 7️⃣ Check if a number is Armstrong Number.
 
+// The sum of its digits raised to the power of number of digits is equal to the original number.
+
+
+
 
 const armStrong = (num) => {
   temp = num;
@@ -20,3 +24,5 @@ const armStrong = (num) => {
 console.log(armStrong(153)); // true
 console.log(armStrong(9474)); // true
 console.log(armStrong(123)); // false
+
+

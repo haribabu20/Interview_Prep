@@ -61,7 +61,7 @@ let obj2 = {
   }
 }
 
-console.log(deepCompare(obj1, obj2));
+console.log(deepCompare(obj1, obj2)); // true
 
 
 

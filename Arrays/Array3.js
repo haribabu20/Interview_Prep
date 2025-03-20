@@ -2,7 +2,6 @@
 
 // if they ask you to sort the 2 individual array first, then sort using sort() or bubble sort it
 
-
 const mergeArray = (arr1, arr2) => {
   let mainArray = [];
   let i=0, j=0;

@@ -39,4 +39,7 @@ why to use Set here ?
   bcz if you see in the if condition, it is easy to check for the duplicate of elements in uniqueSet object by using "has" property.
   This will make sure that there is no duplication in array of object. if any duplicate found, then it fails the condition and skips adding that element into the new array
 
+Mistake
+1) i've given arr instead of arr.name
+
 */

@@ -1,6 +1,5 @@
 // Find the 2nd largest element in an array.
 
-
 const largestElement = (arr) => {
 
   let first=-Infinity, second=-Infinity;

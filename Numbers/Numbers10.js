@@ -20,3 +20,13 @@ console.log(perfectNumber(6)); // true
 console.log(perfectNumber(28)); // true
 console.log(perfectNumber(12)); // false
 console.log(perfectNumber(15)); // false
+
+
+
+/* 
+perfect numbers - 6, 28, 496, 8128
+
+1+2+3 = 6
+1+2+4+7+14 = 28
+
+*/

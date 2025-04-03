@@ -44,6 +44,13 @@ Refer 4B for more details
 10)
   In constructor functions, `this` points to the new object created.
 
+
+11)
+  call(), apply(), bind()
+    - These 3 methods in JS allows us to control the value of this in function call.- call() --> values are passed normally as parameter
+    - apply() -> values are passed as array in parameter
+    - bind() ->  we can allocate it into another variable for later use
+
  */
 
 
@@ -61,6 +68,7 @@ Scenarios:
 5) Arrow function call without object
 6) Event handlers
 7) constructors
+8) call, apply, bind methods
 
 */
 
@@ -211,6 +219,48 @@ console.log(p1.name);       // Hari
 ✅ Because this refers to the new object created using the new keyword.
 ✅ In constructor functions, this refers to the newly created object.
 */
+
+
+
+
+// 8 - call(), apply(), bind()
+
+// call()
+
+function greet(age, role){
+  console.log(`${this.name} of age ${age} in ${role} role`)
+}
+const ojp = {name:'hari'};
+greet.call(ojp, 25, "Dev");
+// output ---> hari of age 25 in Dev role
+
+
+
+// apply() --> only diff in paramater. passing as array
+
+function greet(age, role){
+  console.log(`${this.name} of age ${age} in ${role} role`)
+}
+const ojp1 = {name:'hari'};
+greet.apply(ojp1, [25, "Dev"]);
+
+
+// bind()
+
+function greet(age, role){
+  console.log(`${this.name} of age ${age} in ${role} role`)
+}
+const ojp2 = {name:'hari'};
+let func = greet.bind(ojp2, 25, "Dev");       // here comes the diff
+func();
+
+
+
+
+
+
+
+
 
 
 

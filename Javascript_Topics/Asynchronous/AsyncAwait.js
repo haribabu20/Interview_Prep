@@ -23,24 +23,26 @@ This helps reduce the total time instead of waiting for each API call one by one
 */
 
 
+async function multipleAPI(){
 
-async function fetchMultipleData() {
-  try {
+  try{
     const [users, posts, comments] = await Promise.all([
-      fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()),
-      fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json()),
-      fetch('https://jsonplaceholder.typicode.com/comments').then(res => res.json())
+      fetch('https://jsonplaceholder.typicode.com/users').then(response=>response.json()),
+      fetch('https://jsonplaceholder.typicode.com/posts').then(response=>response.json()),
+      fetch('https://jsonplaceholder.typicode.com/comments').then(response=>response.json())
     ]);
 
-    console.log("User Emails:", users.map(user => user.email));
-    console.log("Total Posts:", posts.length);
-    console.log("Total Comments:", comments.length);
-  } catch (error) {
-    console.log("Error:", error);
+    console.log(users.map(user=>user.email));
+    console.log(posts.length);
+    console.log(comments.length);
+  }
+  catch(error){
+    console.error('Error is -->'+error);
   }
 }
 
-fetchMultipleData();
+multipleAPI();
+
 
 
 

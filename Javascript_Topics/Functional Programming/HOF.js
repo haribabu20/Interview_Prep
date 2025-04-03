@@ -46,3 +46,15 @@ const doubled = numbers.map(function(num){
     return num * 2;
 });
 console.log(doubled); // Output: [2, 4, 6, 8, 10]
+
+
+// Example 4
+
+function add(x){
+  return function(y){ // made mistake
+    return x+y;
+  }
+}
+
+let add5 = add(5);
+console.log(add5(3)) // made mistake --> have to provide the value. should not just only clal the function add5

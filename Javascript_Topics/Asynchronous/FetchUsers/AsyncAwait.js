@@ -2,7 +2,7 @@
 async function fetchUser() {
   try{
     let emails = [];
-    let response = await fetch('https://jsonplaceholder.typicode.com/usersd');
+    let response = await fetch('https://jsonplaceholder.typicode.com/users');
     let users = await response.json();
     emails = users.map((user)=>user.email)
     console.log(emails);

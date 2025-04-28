@@ -28,6 +28,9 @@ const removeDuplicate2 = (arr) => {
 const removeDuplicate3 = (arr1) => {
   return [...new Set(arr1)]
 } 
+// When you do new Set(arr1), it removes duplicates from arr1, but it returns a Set, not an array.
+// The spread operator ... is used to spread the elements of the Set into a new array.
+
 
 
 // Method 4 -> indexOf(value) provides the first index value. refer question3.js for more detailed explanation

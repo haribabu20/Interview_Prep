@@ -1,6 +1,27 @@
 // ⚡ 7️⃣ Move All Zeros to End Without Changing the Order of Other Elements
 
 
+// Approach 1
+const moveZeroLast1 = (arr) => {
+    let nonZero = [];
+    let zero = [];
+    for(let i=0; i<arr.length-1; i++){
+        if(arr[i]===0){
+            zero.push(arr[i]);
+        }
+        else{
+            nonZero.push(arr[i]);
+        }
+    }
+    return nonZero.concat(zero)
+}
+
+ 
+console.log(moveZeroLast1([0,1,5,2,0,5,0,8]));
+
+
+
+// Approach 2
 const moveZeroLast = (arr1) => {
   let index=0;
   let length = arr1.length;

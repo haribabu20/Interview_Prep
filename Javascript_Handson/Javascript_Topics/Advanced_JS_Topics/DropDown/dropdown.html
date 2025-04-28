@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Examples</title>
+</head>
+<body>
+  <h2>Dropdown Examples</h2>
+
+  <!-- 1️⃣ Normal Dropdown -->
+  <label for="dropdown">Select an option:</label>
+  <select id="dropdown"></select>
+  <br><br>
+
+  <!-- 2️⃣ Dependent Dropdown -->
+  <label for="category">Select Category:</label>
+  <select id="category">
+      <option value="">--Select--</option>
+      <option value="metro">Metro Cities</option>
+      <option value="nonMetro">Non-Metro Cities</option>
+  </select>
+
+  <label for="selected">Select City:</label>
+  <select id="selected">
+      <option value="">--Select a City--</option>
+  </select>
+  <br><br>
+
+  <!-- 3️⃣ API-Driven Dropdown -->
+  <label for="dropdownAPI">Select City:</label>
+  <select id="dropdownAPI">
+      <option value="">--Loading Cities--</option>
+  </select>
+
+  <!-- Scripts -->
+  <script src="./Normaldropdown.js"></script>
+  <script src="./advancedDropdown.js"></script>
+  <script src="./APIDropdown.js"></script>
+</body>
+</html>

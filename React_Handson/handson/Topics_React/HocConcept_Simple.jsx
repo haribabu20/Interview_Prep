@@ -1,5 +1,5 @@
 
-// HOC concept with using props
+// HOC concept without using any props
 
 
 // Main Component
@@ -7,7 +7,7 @@ const App = () => {
 const EnhancedParent = HocComponent(ParentComponent) ;
 return(
   <>
-    <EnhancedParent text="Hello"/>
+    <EnhancedParent/>
   </>
 )
 }
@@ -16,12 +16,12 @@ return(
 // Higher Order Component
 const HocComponent = (WrapperComponent) => {
 
-  return (props) => {
+  return () => {
 
     return (
       <>
         <h1>Passed via HOC</h1>
-        <WrapperComponent {...props}/>
+        <WrapperComponent/>
       </>
     )
 
@@ -30,11 +30,10 @@ const HocComponent = (WrapperComponent) => {
 
 
 // Wrapped Component
-const ParentComponent = (props) => {
-  const {text} = props;
+const ParentComponent = () => {
   return (
     <div>
-      <h1>{text} Parent Component</h1>
+      <h1>Parent Component</h1>
     </div>
   )
 }

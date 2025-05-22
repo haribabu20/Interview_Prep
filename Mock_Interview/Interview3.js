@@ -22,6 +22,8 @@ Find the max occuring character in the string and print the character and its co
 
 
 
+1. Difference between null, undefined and NaN
+
 
 
 

@@ -789,7 +789,7 @@ Normally, JavaScript runs on a single thread — so if a task takes too long:
 
   - Empty elements (or void elements) are HTML elements that do not have any content or closing tags. They are self-closing and do not require a separate closing tag.
 
-  - Examples of empty elements include <br>, <img>, <hr>, <input>, and <meta>.
+  - Examples of empty elements include <br>, <img>, <hr>, <input>, and <meta>, <iframe>.
 
 
 

@@ -1,6 +1,6 @@
 // 9️⃣ Flatten a nested array into a single-dimensional array.
 
-
+// Method 1;
 const flattenArray = (arr) => {
   let flatArr = [];
   arr.forEach((element)=>{
@@ -15,6 +15,30 @@ const flattenArray = (arr) => {
 }
 
 console.log(flattenArray([1, [2, 3], [4, [5, 6]], 7]));
+
+
+
+// Method 2:
+let arr = [1, [2, 3], [4, [5, 6]], 7]
+let a = arr.flat(2); // flat() will flatten the array for one layer. here we have 2 layers, so given 2 as paramater for flat
+console.log(a)
+
+
+
+// Method 3:
+let arrr = [[1,2],[3,4],[5,6]]
+let aa = [...arrr[0],...arrr[1],...arrr[2]]
+console.log(aa)
+/*
+arrr[0] is [1, 2]
+
+...arrr[0] spreads it to 1, 2
+Similarly for arrr[1] → 3, 4 and arrr[2] → 5, 6
+So final result: let aa = [1, 2, 3, 4, 5, 6];
+
+
+
+*/
 
 
 

@@ -12,6 +12,9 @@ const Practise = () => {
       <div className='mt-10 text-center'>
         <p className='text-gray-700'>This is a simple Tailwind CSS example.</p>
       </div>
+      <div className='flex justify-center items-center mt-20'>
+        <button className='bg-green-500 hover:bg-green-700 rounded px-5 py-3 text-white '>Submit</button>
+      </div>
     </div>
   )
 }

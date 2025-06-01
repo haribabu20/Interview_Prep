@@ -18,13 +18,15 @@ import Question15 from './handson/Medium/q15-DialogBox.js';
 import Question16 from './handson/Medium/q16-hoverAnimation.js';
 import Question17 from './handson/Medium/q17-darkMode.js';
 
-
+import BlogPostLayout from './handson/Hard/q21-blog.js';
+import DashboardLayout from './handson/Hard/q22-dashboard.js';
+import Table from './handson/Hard/q23-table.js';
 
 function App() {
   return (
     <>
       {/* <Practise_Tailwind/> */}
-      <Question17/>
+      <Table/>
 
     </>
 

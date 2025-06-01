@@ -54,6 +54,12 @@ Handson questions:
 
 
 
+Key Points:
+
+1. Width of card: 
+    w-fully max-w-sm 
+
+
 
 
 
@@ -61,21 +67,36 @@ Handson questions:
 Tailwind CSS Notes:
 
 1. h-screen [Easy Question 1]
+
 2. text-9xl [Easy Question 2] --> largest text size in Tailwind
+
 3. max-w-sm [Easy Question 3] --> sets maximum width to small size
+
 4. space-x-6 [Easy Question 4] --> adds horizontal spacing between elements
    space-y-6 [Easy Question 4] --> adds vertical spacing between elements
+
 5. hover:bg-blue-500 [Easy Question 1] --> changes background color on hover
    hover:scale-105 [Easy Question 5] --> scales image on hover
    w-full [Easy Question 5] --> sets width to 100% of parent container
    max-w-xs [Easy Question 5] --> sets maximum width to extra small size
+
 6. focus:outline-none [Easy Question 6] --> removes default focus outline
    focus:ring-2 [Easy Question 6] --> adds a ring around the input on focus
    border border-gray-400 [Easy Question 6] --> adds a gray border to the input
+
 7. w-lg [Easy Question 7] --> sets width to large size
    w-3/4 [Easy Question 7] --> sets width to 75% of parent container
    min-w-200 [Easy Question 7] --> sets minimum width to 200px
+
 8. flex flex-col [Easy Question 10] --> creates a flex container with column direction
+
+9 mx-auto [Medium Question 11] --> centers the container horizontally
+ this works only if the container has a defined width. So we need to make sure that the content has the width size defined, otherwise it will not work.
+ Ex: w-full, w-3/4, max-w-sm, etc.
+
+10. container [Medium Question 11] --> If we are not defining a width size for the container, we can use the `container` class to apply preset max-widths based on screen size breakpoints. This will center the content and apply appropriate margins.
+
+Ex: <div className="container mx-auto flex justify-between items-center">
 
 
 

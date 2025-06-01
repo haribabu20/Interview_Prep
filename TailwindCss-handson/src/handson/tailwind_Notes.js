@@ -56,6 +56,8 @@ Handson questions:
 
 
 
+
+
 Tailwind CSS Notes:
 
 1. h-screen [Easy Question 1]
@@ -67,7 +69,13 @@ Tailwind CSS Notes:
    hover:scale-105 [Easy Question 5] --> scales image on hover
    w-full [Easy Question 5] --> sets width to 100% of parent container
    max-w-xs [Easy Question 5] --> sets maximum width to extra small size
-
+6. focus:outline-none [Easy Question 6] --> removes default focus outline
+   focus:ring-2 [Easy Question 6] --> adds a ring around the input on focus
+   border border-gray-400 [Easy Question 6] --> adds a gray border to the input
+7. w-lg [Easy Question 7] --> sets width to large size
+   w-3/4 [Easy Question 7] --> sets width to 75% of parent container
+   min-w-200 [Easy Question 7] --> sets minimum width to 200px
+8. flex flex-col [Easy Question 10] --> creates a flex container with column direction
 
 
 
@@ -87,9 +95,23 @@ Important Styling Concepts:
 
     Container: flex
 
+
     Direction:
         Row: flex-row
         Column: flex-col
+
+
+    flex-row:
+        Flex by default will be flex flex-row.
+        items-center will center items vertically.[down]
+        justify-center will center items horizontally.[across]
+
+
+    flex-col:
+        Flex in column direction with flex-col.
+        items-center will center items horizontally.[across]
+        justify-center will center items vertically.[down]
+
 
     Justify Content:
         Start: justify-start
@@ -142,6 +164,143 @@ Important Styling Concepts:
     Center: text-center
     Right: text-right
     Justify: text-justify
+
+
+
+
+
+Tailwind CSS Summary:
+
+// Tailwind Base + Utility Class Notes
+
+// 1. border-*
+//    - Requires: border
+//    - Example: border border-red-500
+
+// 2. ring-*
+//    - Requires: focus state
+//    - Example: focus:ring-2 focus:ring-blue-500
+
+// 3. shadow-*
+//    - No base required
+//    - Example: shadow-lg
+
+// 4. outline-*
+//    - Requires: focus or manual trigger
+//    - Example: focus:outline-none outline-blue-500
+
+// 5. divide-*
+//    - Requires: divide-x or divide-y on flex parent
+//    - Example: divide-x divide-gray-300
+
+// 6. space-x/y-*
+//    - Requires: flex or grid with multiple children
+//    - Example: space-y-4 flex flex-col
+
+// 7. text-*
+//    - No base required
+//    - Example: text-red-500, text-lg
+
+// 8. bg-*
+//    - No base required
+//    - Example: bg-blue-100
+
+
+// 9. w-* h-*, max-w-*, min-w-*, min-h-*
+//    - Requires: no specific base, can be used anywhere
+//    - No base required
+//    - Example: w-64, h-screen
+
+// 10. max-w-* max-h-*
+//     - No base required
+//     - Example: max-w-sm, max-h-80
+
+// 11. min-w-* min-h-*
+//     - No base required
+//     - Example: min-w-[200px]
+
+// 12. inset-*
+//     - Requires: absolute/relative positioning
+//     - Example: absolute inset-0
+
+// 13. top/right/bottom/left-*
+//     - Requires: absolute/relative
+//     - Example: absolute top-0 left-4
+
+// 14. z-*
+//     - Often useful with layered positioning
+//     - Example: z-50
+
+// 15. flex-*
+//     - Requires: flex
+//     - Example: flex justify-between
+
+// 16. grid-*
+//     - Requires: grid
+//     - Example: grid grid-cols-3
+
+// 17. col-span-*
+//     - Requires: grid layout
+//     - Example: col-span-2
+
+// 18. gap-*
+//     - Requires: flex/grid container
+//     - Example: grid gap-4
+
+// 19. overflow-*
+//     - No base required
+//     - Example: overflow-hidden
+
+// 20. scroll-*
+//     - Requires: overflow-scroll
+//     - Example: overflow-x-scroll scroll-smooth
+
+// 21. transition-*, duration-*, ease-*
+//     - Requires: transition
+//     - Example: transition duration-300 ease-in-out
+
+// 22. cursor-*
+//     - No base required
+//     - Example: cursor-pointer
+
+// 23. pointer-events-*
+//     - No base required
+//     - Example: pointer-events-none
+
+// 24. opacity-*
+//     - No base required
+//     - Example: opacity-75
+
+// 25. transform, scale-*, rotate-*, translate-*
+//     - Requires: transform
+//     - Example: transform scale-105 rotate-45 translate-x-2
+
+// 26. hover:*, focus:*, active:*, group-hover:*, group-focus:*
+//     - Requires: hover/focus state
+//     - Example: hover:bg-blue-500 focus:ring-2 active:scale-95 group-hover:text-red-500
+
+// 27. dark:*
+//     - Requires: dark mode enabled
+//     - Example: dark:bg-gray-800 dark:text-white
+
+// 28. responsive prefixes (sm:, md:, lg:, xl:)
+//     - Requires: responsive design
+//     - Example: sm:text-lg md:bg-blue-200 lg:p-6 xl:w-1/2
+
+// 29. custom utilities (e.g., @apply)
+//     - Requires: custom CSS
+//     - Example: @apply bg-red-500 text-white p-4 rounded
+
+
+
+
+
+
+
+
+
+
+
 
 
 

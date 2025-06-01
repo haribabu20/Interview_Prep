@@ -1,3 +1,8 @@
+
+// 2. Build a centered heading with large font size and gray text.
+
+
+
 import React from 'react'
 
 const Question2 = () => {

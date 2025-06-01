@@ -5,13 +5,18 @@ import Question2 from './handson/Easy/q2-heading.js';
 import Question3 from './handson/Easy/q3-card.js';
 import Question4 from './handson/Easy/q4-verticalList.js';
 import Question5 from './handson/Easy/q5-image.js';
+import Question6 from './handson/Easy/q6-input_outline.js';
+import Question7 from './handson/Easy/q7-2Card.js';
+import Question8 from './handson/Easy/q8-badge.js';
+import Question9 from './handson/Easy/q9-all-text.js';
+import Question10 from './handson/Easy/q10-div.js';
 
 
 function App() {
   return (
     <>
       {/* <Practise_Tailwind/> */}
-      <Question5/>
+      <Question10/>
 
     </>
 

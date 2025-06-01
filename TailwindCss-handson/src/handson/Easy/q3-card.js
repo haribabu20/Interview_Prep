@@ -1,4 +1,7 @@
 
+// 3. Create a card with padding, rounded corners, and shadow.
+
+
 import React from 'react'
 
 const Question3 = () => {

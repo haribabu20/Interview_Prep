@@ -15,12 +15,16 @@ import Question12 from './handson/Medium/q12-pricingCard.js';
 import Question13 from './handson/Medium/q13-3card-grid.js';
 import Question14 from './handson/Medium/q14-loginForm.js';
 import Question15 from './handson/Medium/q15-DialogBox.js';
+import Question16 from './handson/Medium/q16-hoverAnimation.js';
+import Question17 from './handson/Medium/q17-darkMode.js';
+
+
 
 function App() {
   return (
     <>
       {/* <Practise_Tailwind/> */}
-      <Question15/>
+      <Question17/>
 
     </>
 

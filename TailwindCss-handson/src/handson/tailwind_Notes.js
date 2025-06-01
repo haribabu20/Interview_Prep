@@ -79,6 +79,8 @@ Tailwind CSS Notes:
    hover:scale-105 [Easy Question 5] --> scales image on hover
    w-full [Easy Question 5] --> sets width to 100% of parent container
    max-w-xs [Easy Question 5] --> sets maximum width to extra small size
+   transform transition duration-300 [Easy Question 5] --> enables smooth transition effects on hover
+
 
 6. focus:outline-none [Easy Question 6] --> removes default focus outline
    focus:ring-2 [Easy Question 6] --> adds a ring around the input on focus

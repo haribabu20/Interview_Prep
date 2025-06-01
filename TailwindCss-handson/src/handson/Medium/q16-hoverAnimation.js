@@ -1,5 +1,3 @@
-// 16. Build a hover-animated profile card with shadow transition.
-
 import React from 'react';
 
 const Question16 = () => {
@@ -8,7 +6,7 @@ const Question16 = () => {
       <div className="bg-white p-6 rounded-xl shadow-md transform transition duration-300 hover:shadow-xl hover:scale-105 w-80 text-center">
         <img
           className="w-24 h-24 rounded-full mx-auto mb-4"
-          src="https://via.placeholder.com/150"
+          src="https://picsum.photos/200"
           alt="Profile"
         />
         <h2 className="text-xl font-bold text-gray-800">John Doe</h2>
@@ -22,3 +20,14 @@ const Question16 = () => {
 };
 
 export default Question16;
+
+
+
+/*
+
+hover:scale-105  --> evlo dhooram munnadi varutho athan scale
+transform transision duration-300 --> athu 300ms varum
+hover:shadow-lg --> hover panrapo shadow varum
+
+
+*/

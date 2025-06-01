@@ -1,3 +1,7 @@
+
+// 5. Make a responsive image with rounded corners and border.
+
+
 import React from 'react'
 
 const Question5 = () => {

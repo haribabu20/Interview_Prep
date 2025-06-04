@@ -19,7 +19,8 @@ import Counter from '../handson/Redux_Handson/counterRedux'
 import UserFetchRedux from '../handson/Redux_Handson/userFetchRedux'
 import Counter_RTK from '../handson/Redux_Handson/Counter_RTK'
 import UserFetchRTK from '../handson/Redux_Handson/UserFetch_RTK'
-import Practise from '../handson/Practise/Practise'
+//import Practise from '../handson/Practise/Practise'
+import BasicForm from '../handson/React_Hook_Form/basicForm'
 
 // const EnhancedParent = HocConcept(ParentClass);
 
@@ -46,7 +47,8 @@ function App() {
       {/* <UserFetchRedux/> */}
       {/* <Counter_RTK/> */}
       {/* <UserFetchRTK/> */}
-      <Practise/>
+      {/* <Practise/> */}
+      <BasicForm/>
     </>
   )
 }

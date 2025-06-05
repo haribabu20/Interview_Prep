@@ -1,7 +1,8 @@
 
-// Basic Form using React Hook form library
-
-// React-Hook-Form is mainly used for performance. It will not re render
+/*
+Basic Form using React Hook form library.
+React-Hook-Form is mainly used for performance. It will not rerender.
+*/
 
 import { useForm } from 'react-hook-form'
 import { DevTool } from '@hookform/devtools'

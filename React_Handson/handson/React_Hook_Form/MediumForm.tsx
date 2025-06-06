@@ -95,6 +95,29 @@ export default MediumForm;
 
 /*
 
+WHY || and not the && operator ?
+
+
+  If email account ends with yahoo.com, then print the error message as "enter gmail account"
+
+    Approach 1:
+      fieldValue.endsWith('yahoo.com') && "Please enter any Gmail account"
+
+    Approach 2:
+      !fieldValue.endsWith('yahoo.com') || "Please enter any Gmail Account"
+
+  My way is Approach 1. But we have to use Approach 2 in this scenario
+
+  Reason: 
+    - If the input ends with yahoo.com, then the statement one will be (!true) = false
+  Since first statement is false, it prints the 2nd statement.
+    - If the input doesn't end with yahoo.com, then it prints (!false) = true
+
+    So it will be either true or the error message will be printed if we use OR operator. But if we use && operator, if the statement 1 is false, then it will not print anything. only if the 1st statement is true, it prints the 2md statment
+  
+
+
+
 1. make sure that the default value is given inside object and default value should be also object. All these should be available inside useForm hook !
 
 2. Inside register

@@ -20,7 +20,10 @@ import UserFetchRedux from '../handson/Redux_Handson/userFetchRedux'
 import Counter_RTK from '../handson/Redux_Handson/Counter_RTK'
 import UserFetchRTK from '../handson/Redux_Handson/UserFetch_RTK'
 //import Practise from '../handson/Practise/Practise'
-import BasicForm from '../handson/React_Hook_Form/basicForm'
+// import BasicForm from '../handson/React_Hook_Form/basicForm'
+// import MediumForm from '../handson/React_Hook_Form/MediumForm'
+import HighForm from '../handson/React_Hook_Form/HighForm'
+import VeryHighForm from '../handson/React_Hook_Form/VeryHighForm'
 
 // const EnhancedParent = HocConcept(ParentClass);
 
@@ -48,7 +51,10 @@ function App() {
       {/* <Counter_RTK/> */}
       {/* <UserFetchRTK/> */}
       {/* <Practise/> */}
-      <BasicForm/>
+      {/* <BasicForm/> */}
+      {/* <MediumForm/> */}
+      {/* <HighForm/> */}
+      <VeryHighForm/>
     </>
   )
 }

@@ -1,3 +1,2 @@
-const {format} = require('date-fns');
+const logEvents = require('./logEvents');
 
-console.log(format(new Date(),'ddMMyyyy\tHH:mm:ss'));

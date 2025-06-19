@@ -6,11 +6,12 @@ const fibonacciSeries = (n) => {
   let series = [0,1];
   for(i=2;i<n;i++){
     series[i] = series[i-1] + series[i-2];
-  }xw
+  }
   return series
 }
 
-console.log(fibonacciSeries(10));
+console.log(fibonacciSeries(10)); //0, 1, 1, 2, 3, 5, 8, 13, 21, ... this is the true fibonacci series !!
+
 
 
 

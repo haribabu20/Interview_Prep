@@ -19,12 +19,20 @@ console.log(palindromString1('madama')); // false
 
 const palindromString2 = (str) => {
   const str1 = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-  const reverseString = str1.split(' ').reverse().join('');
+  const reverseString = str1.split('').reverse().join('');
   return reverseString === str
 }
 
 console.log(palindromString2('madam')) //true
 
+
+
+/*
+
+split('') --> splitting character
+split(' ') -> splitting sentences
+
+*/
 
 
 

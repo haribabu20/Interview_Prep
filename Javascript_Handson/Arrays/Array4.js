@@ -6,7 +6,9 @@ const maximumCount1 = (arr) => {
   for(let i=0; i<arr.length; i++){
     if(arr[i]===1){
       count++;
-      maxCount = Math.max(maxCount, count);
+      if(count>maxCount){
+        maxCount=count;
+      }
     }
     else{
       count=0;

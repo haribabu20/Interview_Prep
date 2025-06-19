@@ -10,9 +10,10 @@ const sumOfDigits = (num) => {
   return sum
 }
 
-console.log(sumOfDigits(123456));
+console.log(sumOfDigits(12345));
 
 
+// mistake: forgot to use while statement !!
 
 
 /*

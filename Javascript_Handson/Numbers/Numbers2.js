@@ -17,3 +17,5 @@ console.log(isPrime(5));    // true
 console.log(isPrime(10));   // false
 console.log(isPrime(7));    // true
 console.log(isPrime(15));   // false
+
+

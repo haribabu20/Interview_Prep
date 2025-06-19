@@ -13,4 +13,7 @@ const reverseString = (str) => {
 console.log(reverseString('string')); // gnirts
 
 
+// mistake: forgot to give as str.length-1. instead i gave str.length
+
+
 // if we are not assigning value to rev, "undefinedgnirts" this will be the output as it stores the value undefined if not initialised.

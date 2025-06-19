@@ -2,6 +2,9 @@
 
 
 
+// all the if statement can come in same for loop !
+
+
 const findSecondMinMax = (arr) => {
   let min = Infinity;
   let secondMin = Infinity;

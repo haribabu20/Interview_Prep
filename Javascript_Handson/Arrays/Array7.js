@@ -15,7 +15,7 @@ const getUniqueObjects = (arr) => {
   return arr.filter(obj => {
     if(!uniqueSet.has(obj.name)){
       uniqueSet.add(obj.name);
-      return true
+      return true // elememt will be added in new array only if the return is true.
     }
     return false;
   })
@@ -28,6 +28,11 @@ console.log(getUniqueObjects(arr))
 
 
 /* 
+
+mistake:
+1. forgot to include return statement inside and outside if condition
+
+
 
 Explanation:
 

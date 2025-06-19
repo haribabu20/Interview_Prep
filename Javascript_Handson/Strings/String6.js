@@ -18,12 +18,14 @@ const frequentCharacter = (word) => {
       maxChar = char;
     }
   }
-  return maxChar;
+  return {maxChar, maxCount};
 }
 
 console.log(frequentCharacter("apple"));   // p
 console.log(frequentCharacter("banana"));  // a
-console.log(frequentCharacter("programming"));  // g
+console.log(frequentCharacter("programmmmmming"));  // { maxChar: 'm', maxCount: 6 }
 
+
+// mistake in line 16 to 19
 
 // same question as before, but here we are validating the maxCount.

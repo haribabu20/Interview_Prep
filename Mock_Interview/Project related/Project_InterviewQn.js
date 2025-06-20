@@ -1,6 +1,38 @@
 
 /*
 
+
+Questions:
+
+1. Can you briefly describe the React project you worked on at HCLTech — especially the compliance management system you mentioned in your resume? What was your exact role and contribution?
+
+2. Can you give an example of a specific React component you built in this project that was reusable across multiple pages or features?
+What challenges did you face while making it reusable?
+
+3. "Can you explain how you handled form validation in your project? Did you use any libraries, or did you implement custom validation?What kind of validations did you perform?"
+
+4. Can you explain how you handled state management in your project? Did you use any tools or libraries like Redux or Context API? Why did you choose that approach?"
+
+5. In your Customer Compliance Management System, how did you handle API calls for fetching or updating customer data? Did you use any middleware like Redux Thunk or Redux Toolkit's createAsyncThunk — or did you manage API calls in the component itself? Explain your approach and why you chose it."
+
+6. In your Customer Compliance Management System project, how did you handle API errors? For example, what happened if fetching customer details failed? Did you show any error messages or fallback UIs to the user? Explain your approach."
+
+7. Optimization
+  1. Debugging tools
+  2. Larger list optimization - table
+  3. SSP and pagination
+  4. infinite scrolling and virtualisation library
+  5. Recuding the bundle size in your application
+  6. responsiveness
+  7. image optimization
+
+
+
+
+
+
+
+
 | Topic                                 | Prepared?                                |
 | ------------------------------------- | ---------------------------------------- |
 | Reusable Components                   | ✅ (but you can practice speaking)        |
@@ -381,9 +413,7 @@ Detail:
 
 6. Error Handling
 
-  "In your Customer Compliance Management System project, how did you handle API errors?
-  For example, what happened if fetching customer details failed?
-  Did you show any error messages or fallback UIs to the user? Explain your approach."
+  "In your Customer Compliance Management System project, how did you handle API errors? For example, what happened if fetching customer details failed? Did you show any error messages or fallback UIs to the user? Explain your approach."
 
 
 Ans:
@@ -791,6 +821,24 @@ I ensured a responsive, smooth, and optimized UI using TailwindCSS utilities, Fl
 
 
 
+
+
+
+
+
+
+
+10. Image Optimization:
+
+"In our project, image optimization was not a major focus area since we mainly dealt with dashboards, forms, and data tables — but I did implement a few good practices in one of the squads where image handling was slightly involved. they are,
+
+  Lazy Loading:
+  I used the loading="lazy" attribute for <img> tags to defer offscreen image loading, which helped improve initial page load time.
+
+  Optimized Formats:
+  Wherever possible, I preferred using WebP format over traditional JPEG or PNG because of its smaller file size and efficient compression.
+
+Since our app didn’t handle large or media-heavy content, deeper optimization like CDN image processing or placeholders wasn’t much required."_
 
 
 

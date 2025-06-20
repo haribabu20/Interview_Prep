@@ -1,13 +1,17 @@
 // 6️⃣ Sort an array in ascending and descending order without using sort().
+// write js code to sort array of objects by a key and explain
+
+
+
 
 // Bubble Sorting - Ascending and Descending Order
 
-
+// for normal data
 const sortAscending = (arr) => {
   let n = arr.length;
   let temp;
   for(let i=0; i<n-1; i++){
-    for(let j=0; j<n-1-i; j++){
+    for(let j=0; j<n-i-1; j++){
       if(arr[j]>arr[j+1]){
         temp = arr[j];
         arr[j] = arr[j+1];
@@ -17,6 +21,12 @@ const sortAscending = (arr) => {
   }
   return arr;       // [ 1, 2, 3, 4, 5, 8 ]
 }
+
+// mistake: in 2nd for of J --> it is n-i-1 and not n-1-i
+
+
+// for array of objects, just in the baove if condition, put ( arr[j].id > arr[j+1].id )
+
 
 
 const sortDescending = (arr) => {

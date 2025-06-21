@@ -3,7 +3,9 @@ import axios from 'axios';
 
 const UserTable = () => {
   const [users, setUsers] = useState([]);
-  const [sortOrder, setSortOrder] = useState('asc'); // 'asc' or 'desc'
+  const [sortOrder, setSortOrder] = useState('asc');
+  const [currentPage, setCurrentPage] = useState(1); // New State for pagination
+  const rowsPerPage = 5; // Show 5 rows per page
 
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')
@@ -24,17 +26,32 @@ const UserTable = () => {
       }
     });
     setUsers(sortedUsers);
-    setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc'); // toggle
+    setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+  };
+
+  // Calculate which users to show on the current page
+  const indexOfLastUser = currentPage * rowsPerPage;
+  const indexOfFirstUser = indexOfLastUser - rowsPerPage;
+  const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
+
+  const totalPages = Math.ceil(users.length / rowsPerPage);
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
+  const goToPrevPage = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
   return (
     <div>
-      <h2>User List</h2>
+      <h2>User List with Pagination</h2>
       <table border="1" cellPadding="10" cellSpacing="0">
         <thead>
           <tr>
             <th>ID</th>
-            <th onClick={handleSortByName}Cos>
+            <th onClick={handleSortByName} style={{cursor: 'pointer'}}>
               Name {sortOrder === 'asc' ? '🔼' : '🔽'}
             </th>
             <th>Email</th>
@@ -42,7 +59,7 @@ const UserTable = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map(user => (
+          {currentUsers.map(user => (
             <tr key={user.id}>
               <td>{user.id}</td>
               <td>{user.name}</td>
@@ -52,6 +69,13 @@ const UserTable = () => {
           ))}
         </tbody>
       </table>
+
+      {/* Pagination Controls */}
+      <div style={{ marginTop: '10px' }}>
+        <button onClick={goToPrevPage} disabled={currentPage === 1}>Prev</button>
+        <span style={{margin: '0 10px'}}>Page {currentPage} of {totalPages}</span>
+        <button onClick={goToNextPage} disabled={currentPage === totalPages}>Next</button>
+      </div>
     </div>
   );
 };

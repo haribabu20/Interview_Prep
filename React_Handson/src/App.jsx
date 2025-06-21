@@ -24,6 +24,8 @@ import UserFetchRTK from '../handson/Redux_Handson/UserFetch_RTK'
 // import MediumForm from '../handson/React_Hook_Form/MediumForm'
 import HighForm from '../handson/React_Hook_Form/HighForm'
 import VeryHighForm from '../handson/React_Hook_Form/VeryHighForm'
+import Table_sorting from '../handson/Interview_Handson/API-DataFetch_Table/Table_sorting'
+import Table_pagination from '../handson/Interview_Handson/API-DataFetch_Table/Table_pagination'
 
 // const EnhancedParent = HocConcept(ParentClass);
 
@@ -54,7 +56,9 @@ function App() {
       {/* <BasicForm/> */}
       {/* <MediumForm/> */}
       {/* <HighForm/> */}
-      <VeryHighForm/>
+      {/* <VeryHighForm/> */}
+      {/* <Table_sorting/> */}
+      <Table_pagination/>
     </>
   )
 }

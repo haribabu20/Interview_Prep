@@ -18,6 +18,3 @@ const minMax = (arr) => {
 
 console.log(minMax([0,33,42,94,-23,-24]));
 
-
-
-// 

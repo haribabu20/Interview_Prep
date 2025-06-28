@@ -20,10 +20,6 @@ input.addEventListener('input', (event) => {
 
 
 
-
-
-
-
 /*
                           Explanation:
 

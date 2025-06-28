@@ -24,8 +24,12 @@ import UserFetchRTK from '../handson/Redux_Handson/UserFetch_RTK'
 // import MediumForm from '../handson/React_Hook_Form/MediumForm'
 import HighForm from '../handson/React_Hook_Form/HighForm'
 import VeryHighForm from '../handson/React_Hook_Form/VeryHighForm'
-import Table_sorting from '../handson/Interview_Handson/API-DataFetch_Table/Table_sorting'
-import Table_pagination from '../handson/Interview_Handson/API-DataFetch_Table/Table_pagination'
+import A_API_Promise from '../handson/Interview_Handson/API/A_API_Promise'
+import B_API_async from '../handson/Interview_Handson/API/B_API_async'
+import C_API_async_table from '../handson/Interview_Handson/API/C_API_async_table'
+import D_API_async_table_sorting from '../handson/Interview_Handson/API/D_API_async_table_sorting'
+import E_API_async_table_pagination from '../handson/Interview_Handson/API/E_API_async_table_pagination'
+import Parent from '../handson/Practise/Practise_React'
 
 // const EnhancedParent = HocConcept(ParentClass);
 
@@ -58,7 +62,13 @@ function App() {
       {/* <HighForm/> */}
       {/* <VeryHighForm/> */}
       {/* <Table_sorting/> */}
-      <Table_pagination/>
+      {/* <Table_pagination/> */}
+      {/* <A_API_Promise/> */}
+      {/* <B_API_async/> */}
+      {/* <C_API_async_table/> */}
+      {/* <D_API_async_table_sorting/> */}
+      {/* <E_API_async_table_pagination/> */}
+      <Parent/>
     </>
   )
 }

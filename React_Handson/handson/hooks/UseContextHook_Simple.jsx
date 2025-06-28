@@ -24,6 +24,13 @@ export default Example
 
 
 
+
+
+
+
+
+// Example 2
+
 const UserContext1 = createContext();
 
 

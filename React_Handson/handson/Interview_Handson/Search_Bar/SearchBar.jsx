@@ -1,42 +1,61 @@
+import { useState } from "react";
 
-// 9. Create a search bar that filters a list of items as the user types.
-
-
-import React from 'react'
-import {useState} from 'react'
-
-const SearchBar = () => {
+const Parent = () => {
+  const cityName = [
+    'Chennai',
+    'Mumbai',
+    'Kolkata',
+    'Delhi',
+    'Coimbatore',
+    'Bengaluru',
+    'Madurai',
+    'Vrindavan'
+  ];
 
   const [searchValue, setSearchValue] = useState('');
 
-  const list = ['Apple', 'Banana', 'Mango', 'Pomo', 'Dragon', 'Kiwi', 'Orange'];
+  const filteredCities = cityName.filter((city) =>
+    city.toLowerCase().includes(searchValue.toLowerCase())
+  );
 
-  const handleList = list.filter((li) => (          // to view 
-    li.toLowerCase().includes(searchValue.toLowerCase())  // mistake. used contains instead of includes
-  ))
-
-  const handleChange = (e) => {
-    setSearchValue(e.target.value)
-  }
-
-  return(
+  return (
     <div>
       <input
-        name='list'
-        placeholder="Search.."
+        type='text'
+        placeholder='Search cities...'
         value={searchValue}
-        onChange={handleChange}
+        onChange={(e) => setSearchValue(e.target.value)}
       />
 
-    <ul>
-      {
-        handleList.map((li, index) => (
-          <li key={index}>{li}</li>       // mistake --> missed including this
-        ))
-      }
-    </ul>
+      <ul>
+        {filteredCities.map((city, index) => (
+          <li key={index}>{city}</li>
+        ))}
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default Parent;
+
+
+/*
+
+1. Routes Setup
+<Route path='/' element={<About/>}>  <Route/>
+<Route path='/user/:id' element={<About/>}>  <Route/>
+
+
+2. Navigation to dynamic route
+<nav>
+  <Link to='/user/101'> User 101 <Link/>
+  <Link to='/user/102'> User 102 <Link/>
+<nav/>
+
+
+3. Using useParams
+ = userparams()
+
+
+
+*/

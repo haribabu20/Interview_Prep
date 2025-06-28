@@ -1,25 +1,33 @@
-import {useState} from 'react'
+import { useState } from "react";
 
-const ToggleDiv = () => {
+const Parent = () => {
 
-  const [toggle, setToggle] = useState(false)
+  const cityName = ['Chennai', 'Mumbai', 'Kolkata', 'Delhi', 'Coimbatore', 'Bengaluru', 'Madurai', 'Vrindavan'];
 
-  const handleClick = () => {
-    setToggle(!toggle)
-  }
+  const [searchValue, setSearchValue] = useState('');
+
+  let list = cityName.filter((li)=>(
+    li.toLowerCase().includes(searchValue.toLowerCase())
+  ))
 
   return(
     <div>
-      <button onClick={handleClick}>
-        {toggle ? 'Hide':'Show'} Content
-      </button>
-      {toggle && (
-          <div>
-            <p>Hi</p>
-          </div>
-        )}
+      <input type='text' value={searchValue} onChange={(e)=>setSearchValue(e.target.value)}></input>
+
+
+      {
+        list.map((lis,idx) => (
+          <ul>
+            <li key={idx}>{lis}</li>
+          </ul>
+        ))
+      }
+
     </div>
+
+
   )
+
 }
 
-export default ToggleDiv
+export default Parent;

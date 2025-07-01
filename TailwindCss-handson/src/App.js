@@ -22,12 +22,14 @@ import BlogPostLayout from './handson/Hard/q21-blog.js';
 import DashboardLayout from './handson/Hard/q22-dashboard.js';
 import Table from './handson/Hard/q23-table.js';
 
+
+
 function App() {
   return (
     <>
       {/* <Practise_Tailwind/> */}
       <Table/>
-
+      
     </>
 
   )

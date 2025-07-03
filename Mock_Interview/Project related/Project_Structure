@@ -1,0 +1,24 @@
+
+1. In your projects, how did you organize your React application structure?
+2. can you explain the Folder structure or design patterns you followed?
+3. can you explain how you managed scalability and maintainability?
+4. When did you decide to use Redux over Context API?
+5. Can you walk me through a typical flow — from dispatching an action to updating the UI?
+6. Can you give me a real scenario where you applied 
+    - React.Memo and useMemo ?
+    - Lazy loading (React.lazy, Suspense)
+  And how it impacted your app?
+7. Imagine your designer gives you a card component like a loan summary card, used across the app in 5+ places but with slight variations (e.g., some with icons, some with buttons, some read-only).
+  How would you design this component to be:
+  - Reusable
+  - Customizable via props or composition
+  - Easy to test and maintain?
+
+
+
+
+
+
+
+
+

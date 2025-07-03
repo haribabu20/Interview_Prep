@@ -1,26 +1,23 @@
-/*
 
-1. "What was your individual contribution in the project?"
 
-2. "Did you face any challenges while working with cross-functional teams (backend, QA, BA)? How did you handle that?"
 
-3. "Tell me a situation where a production bug occurred. How did you approach it?"
+Questions:
 
-4. "How do you ensure smooth communication with backend or QA when an issue arises?"
+1. What was your individual contribution in the project?
+2. Did you face any challenges while working with cross-functional teams (backend, QA, BA)? How did you handle that?
+3. Tell me a situation where a production bug occurred. How did you approach it?
+4. Name some libraries that you used in your projects?
+5. Explain how you'll interact with you backend team. What are all the things that you'll discuss among yourself before starting any feature to work
+6. What kind of work you've done when you're in nodeJS team
 
-5. "How do you prioritize tasks when multiple issues or requirements come at the same time?"
 
-8. "How do you make sure your code is delivered on time during sprint cycles?"
 
-9. "What ReactJS or frontend concepts have you recently learned or improved?"
+7. How do you ensure smooth communication with backend or QA when an issue arises?
+8. How do you prioritize tasks when multiple issues or requirements come at the same time?
+9. How do you make sure your code is delivered on time during sprint cycles?
+10. What ReactJS or frontend concepts have you recently learned or improved?
+11. What would you like to improve in your technical skill set in the coming months?
 
-10 "What would you like to improve in your technical skill set in the coming months?"
-
-11. Name some libraries that you used in your projects
-
-12. Explain how you'll interact with you backend team. What are all the things that you'll discuss among yourself before starting any feature to work
-
-13. What kind of work you've done when you're in nodeJS team
 
 
 
@@ -46,6 +43,8 @@ Important Tips for Interview (if they dig deeper):
 
 2. If they ask "Did you handle state management?" — say:
     "Yes, I handled local state using useState and useReducer, and shared state using Redux and Context API depending on the requirement."
+
+
 
 
 
@@ -143,7 +142,11 @@ The issue happened on the Customer Detail page, where customer data was not prop
 
 
 
-                                  """""""_____Important____"""""""
+
+
+                                                      """""""_____Important____"""""""
+
+
 
 
 
@@ -153,6 +156,7 @@ The issue happened on the Customer Detail page, where customer data was not prop
 Ans:
 
 "Before starting the development of any feature, I make sure to have clear and smooth communication with the backend team to avoid rework or blockers later. Some important points we discuss are:"
+
 
 🔍 1. API Endpoints:
 What APIs will be provided by the backend?
@@ -240,6 +244,3 @@ Handson:
 
 
 
-
-
-*/

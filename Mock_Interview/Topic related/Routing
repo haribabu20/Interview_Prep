@@ -1,9 +1,43 @@
 
+
+
+
+Question:
+
+
+1. Can you explain how React Router works under the hood in a single-page application?
+2. How does nested routing work in React Router v6, and how would you handle layouts with it?
+3. What is nested routing in React Router v6? How do you implement layouts using <Outlet />?
+4. What is React Router and why do we use it in Single Page Applications (SPA)?
+5. Explain how <Routes> and <Route> work in React Router v6. What’s the difference from v5?
+6. What is the difference between useNavigate, useHistory, and Link? When would you use each?
+7. How do you pass route parameters in React Router? How do you access them inside the component?
+8. How do you implement programmatic navigation inside a component?
+9. What is route protection? How would you implement protected/private routes in React Router?
+10. What is lazy loading in routing? How can you implement code-splitting using React.lazy() with React Router?
+11. How does React Router handle browser navigation — back/forward buttons or refresh?
+12. Can you explain relative vs absolute routing? How does . or .. in path affect nested routes?
+
+
+
+
+
+
+
+Answers
+
+
+
+
+
+
 1. Can you explain how React Router works under the hood in a single-page application?
 
 React Router is a client-side routing library for React. In a single-page application, there's only one HTML file, and React Router uses the HTML5 History API (or hash routing) to update the URL in the address bar without refreshing the page. It listens to URL changes and renders components based on the route definitions.
 
 At the core, we wrap our app with <BrowserRouter> to enable routing, and use <Routes> and <Route> to map paths to components. When navigation occurs — either via a <Link> or programmatically using useNavigate() — React Router intercepts that, updates the URL, and renders the matched component tree.
+
+
 
 
 
@@ -38,6 +72,9 @@ function App() {
 
 
 
+
+
+
 3. What is nested routing in React Router v6? How do you implement layouts using <Outlet />?
 
 
@@ -46,6 +83,7 @@ In React Router v6, nested routing allows us to render child components inside a
 We use the <Outlet /> component from react-router-dom to indicate where the nested child route should be rendered inside the parent component.
 
 This pattern promotes layout composition, where parent components provide the shell and child routes render their specific content inside it.
+
 
 
 
@@ -100,6 +138,7 @@ Ex: for v5:
   <Route exact path="/" component={Home} />
   <Route path="/about" render={() => <About />} />
 </Switch>
+
 
 
 
@@ -165,59 +204,60 @@ Ex:
 
 7. How do you pass route parameters in React Router? How do you access them inside the component?
 
-A route parameter is just a value (like an ID or name) that you pass inside the URL.
-🧠 Think like this:
-When you go to https://facebook.com/profile/123 — the 123 is the user's ID, and it’s a parameter.
+
+  A route parameter is just a value (like an ID or name) that you pass inside the URL.
+  🧠 Think like this:
+  When you go to https://facebook.com/profile/123 — the 123 is the user's ID, and it’s a parameter.
 
 
-In React Router, route parameters are passed using a colon (:) in the route path definition, and you access them using the useParams() hook inside the component.
+  In React Router, route parameters are passed using a colon (:) in the route path definition, and you access them using the useParams() hook inside the component.
 
 
-1. Route: "path" --> Define the Route url that maps to the component.
-          "element" --> Define the component
-2. Link: "to" --> give the exact url --> this is clickable
-3. useParam: this hook is used to take the route param [param in url].
-
-
-
-a)  Define the Route with a Param
-
-import { Routes, Route } from 'react-router-dom';
-import UserProfile from './UserProfile';
-
-<Routes>
-  <Route path="/user/:id" element={<UserProfile />} />
-</Routes>
-
-Here, :id is a dynamic URL parameter.
+  1. Route: "path" --> Define the Route url that maps to the component.
+            "element" --> Define the component
+  2. Link: "to" --> give the exact url --> this is clickable
+  3. useParam: this hook is used to take the route param [param in url].
 
 
 
-b)  Navigate to That Route
+  a)  Define the Route with a Param
 
-import { Link } from 'react-router-dom';
+  import { Routes, Route } from 'react-router-dom';
+  import UserProfile from './UserProfile';
 
-<Link to="/user/101">View Profile</Link>
+  <Routes>
+    <Route path="/user/:id" element={<UserProfile />} />
+  </Routes>
 
-This will render the UserProfile component and show User Profile for ID: 101.
-
-
-
-
-c)  Access the Param in the Component
+  Here, :id is a dynamic URL parameter.
 
 
-import { useParams } from 'react-router-dom';
 
-const UserProfile = () => {
-  const { id } = useParams(); // id comes from the route
+  b)  Navigate to That Route
 
-  return (
-    <div>
-      <h2>User Profile for ID: {id}</h2>
-    </div>
-  );
-};
+  import { Link } from 'react-router-dom';
+
+  <Link to="/user/101">View Profile</Link>
+
+  This will render the UserProfile component and show User Profile for ID: 101.
+
+
+
+
+  c)  Access the Param in the Component
+
+
+  import { useParams } from 'react-router-dom';
+
+  const UserProfile = () => {
+    const { id } = useParams(); // id comes from the route
+
+    return (
+      <div>
+        <h2>User Profile for ID: {id}</h2>
+      </div>
+    );
+  };
 
 
 
@@ -340,6 +380,9 @@ function App() {
 
 
 I’ll create a ProtectedRoute wrapper that checks if the user is authenticated (like checking localStorage or context). If not, I’ll use <Navigate /> to redirect to /login. I’ll wrap all sensitive routes inside this ProtectedRoute in the router config.
+
+
+
 
 
 

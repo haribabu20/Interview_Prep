@@ -1,4 +1,36 @@
 
+
+
+Question:
+
+1. What is Tailwind CSS and how is it different from other CSS frameworks like Bootstrap?
+2. How do you customize your Tailwind config using tailwind.config.js?
+3. How do you conditionally apply Tailwind classes in a React component?
+4. How do you handle responsive design in Tailwind?
+5. What are @apply and @layer used for in Tailwind?
+
+
+6. How do you create reusable UI components with Tailwind CSS in a React project?
+7. How do you manage dark mode with Tailwind CSS in a React app?
+8. How would you structure large Tailwind-based projects for maintainability?
+9. How do you create reusable and responsive UI components using Tailwind CSS.
+
+
+
+
+
+
+
+
+
+Answer:
+
+
+
+
+
+
+
 1. What is Tailwind CSS and how is it different from other CSS frameworks like Bootstrap?
 
 Tailwind CSS is a utility-first CSS framework, which means it provides low-level utility classes like p-4, text-center, bg-blue-500, and flex that you can directly use in your markup to build custom designs — without writing any CSS yourself.
@@ -58,6 +90,8 @@ Real world usage:
 
 
 Customizing the tailwind.config.js gives you design consistency, removes the need for inline styles or external CSS, and lets you scale your UI efficiently — especially in large React projects.
+
+
 
 
 

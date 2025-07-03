@@ -1,23 +1,18 @@
-import React, {useCallback, useMemo, useState} from 'react'
+function Customer({ num }) {
+  let squared = useMemo(() => {
+    return num * num;
+  }, [num]);
 
-const Example = () => {
-
-  const [count, setCount] = useState(0);
-
-  const arr = [1,2,3,4,5];
-
-  const evenNumbers = useMemo(() => {
-    console.log('Recalculating...')
-    return arr.filter((ele)=>ele%2===0);
-  },[]);    // Make sure to give here as empty dependency array as it won't support if we give arr.
-
-  return (
-    <div>
-      <h3>Count: {count}</h3>
-      <button onClick={()=>setCount(prev=>prev+1)}>Increment</button><br/>
-      <p>Even Number: {evenNumbers}</p>
-    </div>
-  )
+  return <h1>{squared}</h1>;
 }
 
-export default Example
+
+/*
+
+📘 Explanation (What you can say in the interview):
+
+"Here, I'm using useMemo to calculate the square of a number passed as a prop.
+React will only recalculate num * num when num changes.
+If the parent re-renders without changing num, this avoids re-running the square logic."
+
+*/

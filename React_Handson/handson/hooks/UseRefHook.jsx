@@ -1,3 +1,13 @@
+
+
+/*
+
+
+UseRef lets you directly access DOM elements without triggering a re-render, unlike state.
+
+*/
+
+
 import React, { useRef } from 'react'
 
 const Exmaple = () => {

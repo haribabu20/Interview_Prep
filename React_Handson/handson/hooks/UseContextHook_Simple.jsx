@@ -3,11 +3,6 @@ import React, {createContext, useContext} from 'react'
 
 const UserContext = createContext();
 
-const DisplayUser = () => {
-  const user = useContext(UserContext);
-  return <p>User: {user}</p>;
-}
-
 
 const Example = () => {
 
@@ -21,6 +16,13 @@ const Example = () => {
 }
 
 export default Example
+
+
+// In any component, we can use the user
+const DisplayUser = () => {
+  const user = useContext(UserContext);
+  return <p>User: {user}</p>;
+}
 
 
 

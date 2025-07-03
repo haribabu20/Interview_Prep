@@ -1,0 +1,458 @@
+
+1. Can you explain how React Router works under the hood in a single-page application?
+
+React Router is a client-side routing library for React. In a single-page application, there's only one HTML file, and React Router uses the HTML5 History API (or hash routing) to update the URL in the address bar without refreshing the page. It listens to URL changes and renders components based on the route definitions.
+
+At the core, we wrap our app with <BrowserRouter> to enable routing, and use <Routes> and <Route> to map paths to components. When navigation occurs — either via a <Link> or programmatically using useNavigate() — React Router intercepts that, updates the URL, and renders the matched component tree.
+
+
+
+
+
+2. How does nested routing work in React Router v6, and how would you handle layouts with it?
+
+In React Router v6, nested routing allows us to define child routes inside parent routes, which helps in implementing layout-based structures.
+
+For example, if we have a common layout like a navigation bar or sidebar that should persist across multiple routes (e.g., /about, /contact, /dashboard), we wrap those child routes inside a parent route whose element is the layout component.
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './Layout';
+import About from './About';
+import Contact from './Contact';
+import Home from './Home';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+
+
+
+
+3. What is nested routing in React Router v6? How do you implement layouts using <Outlet />?
+
+
+In React Router v6, nested routing allows us to render child components inside a parent route. This is particularly useful when we have shared layouts like headers, sidebars, or footers.
+
+We use the <Outlet /> component from react-router-dom to indicate where the nested child route should be rendered inside the parent component.
+
+This pattern promotes layout composition, where parent components provide the shell and child routes render their specific content inside it.
+
+
+
+
+
+
+
+4. What is React Router and why do we use it in Single Page Applications (SPA)?
+
+
+React Router is a library for routing in React applications, especially useful in Single Page Applications (SPAs). It allows us to define multiple routes (URLs) in our app and render specific components based on the current route — without reloading the browser.
+
+In a traditional website, navigating between pages causes a full page reload. But in SPAs, React Router helps change the URL and render different views dynamically, keeping the app fast and smooth.
+
+We use it to:
+
+  Navigate between different pages (Home, About, Dashboard, etc.)
+  Create dynamic routes (e.g., /user/:id)
+  Implement nested routes and layouts
+  Control navigation using hooks like useNavigate, useParams, useLocation, etc.
+
+
+
+
+
+
+
+
+
+
+5. Explain how <Routes> and <Route> work in React Router v6. What’s the difference from v5?
+
+In React Router v6, <Routes> and <Route> are used to define your routing configuration.
+They replace the older <Switch> and have important differences from v5:
+
+| Feature         | React Router v5                    | React Router v6                           |
+| --------------- | ---------------------------------- | ----------------------------------------- |
+| Routing Wrapper | `<Switch>`                         | `<Routes>`                                |
+| Element prop    | `component={}` or `render={()}`    | `element={<Component />}`                 |
+| Path matching   | Partial match by default           | **Exact match by default**                |
+| Nesting         | Manual nesting with separate files | Easier nesting with `<Outlet />`          |
+| Route priority  | First match wins (manual order)    | **Automatic ranking and best match wins** |
+
+
+
+- Instead of Routes, we have Switch in V5 version of router. now we have v6
+- instead of component, we will give element in v6 version
+
+Ex: for v5:
+
+<Switch>
+  <Route exact path="/" component={Home} />
+  <Route path="/about" render={() => <About />} />
+</Switch>
+
+
+
+
+
+
+
+
+
+6. What is the difference between useNavigate, useHistory, and Link? When would you use each?
+
+
+✅ useNavigate (React Router v6):
+A hook used inside a component to navigate programmatically.
+It replaces useHistory from React Router v5.
+Example use case: Redirecting the user after a form submission.
+
+
+✅ useHistory (React Router v5 - DEPRECATED):
+Used to manipulate the browser history (push, replace, goBack).
+Now replaced by useNavigate in v6.
+
+
+✅ Link:
+A component used to navigate between routes declaratively.
+It’s similar to an anchor tag (<a>) but avoids full page reloads by using React Router's internal routing.
+
+
+
+| Use Case                          | Use This        |
+| --------------------------------- | --------------- |
+| Navigate on button click / logic  | `useNavigate()` |
+| Navigate via clickable UI element | `<Link />`      |
+| React Router v5 projects (legacy) | `useHistory()`  |
+
+
+Ex:
+
+  import { Link, useNavigate } from 'react-router-dom';
+
+  const Login = () => {
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+      // perform login logic
+      navigate('/dashboard'); // programmatic navigation
+    };
+
+    return (
+      <div>
+        <button onClick={handleLogin}>Login</button>
+        <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
+      </div>
+    );
+  };
+
+
+
+
+
+
+
+
+7. How do you pass route parameters in React Router? How do you access them inside the component?
+
+A route parameter is just a value (like an ID or name) that you pass inside the URL.
+🧠 Think like this:
+When you go to https://facebook.com/profile/123 — the 123 is the user's ID, and it’s a parameter.
+
+
+In React Router, route parameters are passed using a colon (:) in the route path definition, and you access them using the useParams() hook inside the component.
+
+
+1. Route: "path" --> Define the Route url that maps to the component.
+          "element" --> Define the component
+2. Link: "to" --> give the exact url --> this is clickable
+3. useParam: this hook is used to take the route param [param in url].
+
+
+
+a)  Define the Route with a Param
+
+import { Routes, Route } from 'react-router-dom';
+import UserProfile from './UserProfile';
+
+<Routes>
+  <Route path="/user/:id" element={<UserProfile />} />
+</Routes>
+
+Here, :id is a dynamic URL parameter.
+
+
+
+b)  Navigate to That Route
+
+import { Link } from 'react-router-dom';
+
+<Link to="/user/101">View Profile</Link>
+
+This will render the UserProfile component and show User Profile for ID: 101.
+
+
+
+
+c)  Access the Param in the Component
+
+
+import { useParams } from 'react-router-dom';
+
+const UserProfile = () => {
+  const { id } = useParams(); // id comes from the route
+
+  return (
+    <div>
+      <h2>User Profile for ID: {id}</h2>
+    </div>
+  );
+};
+
+
+
+
+
+
+
+8. How do you implement programmatic navigation inside a component?
+
+In React Router, we use the useNavigate() hook to navigate to different routes programmatically — that means without clicking a <Link> or <NavLink>.
+This is helpful when you want to redirect the user after a certain event, like form submission, button click, login, etc.
+
+🛠️ Example Use Case:
+Let's say you have a Login form, and after a successful login, you want to redirect the user to /dashboard.
+You don’t want them to click a link — you just want to move them automatically.
+
+Handson:
+
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
+function Login() {
+  const navigate = useNavigate();  // Step 1: useNavigate hook
+
+  const handleLogin = () => {
+    // pretend login was successful
+    console.log("Login Success ✅");
+
+    navigate('/dashboard');  // Step 2: programmatic navigation
+  }
+
+  return (
+    <div>
+      <h2>Login Page</h2>
+      <button onClick={handleLogin}>Login</button>
+    </div>
+  );
+}
+
+export default Login;
+
+
+| Step | What’s Happening                                       |
+| ---- | ------------------------------------------------------ |
+| 1️⃣  | We use `useNavigate()` to get the `navigate` function. |
+| 2️⃣  | On button click, we call `navigate('/dashboard')`.     |
+| 3️⃣  | It programmatically changes the route to `/dashboard`. |
+
+
+
+
+
+
+9. What is route protection? How would you implement protected/private routes in React Router?
+
+Route protection means blocking access to certain pages (routes) unless the user is authenticated (logged in).
+For example: /dashboard or /profile should only be accessible if the user is logged in.
+We implement this using a "ProtectedRoute" component that checks if the user is allowed — if not, we redirect them to login.
+
+Handson:
+
+1️⃣ Create a Fake Auth Check (Mock Login): 
+
+//auth.js
+
+export const isAuthenticated = () => {
+  return localStorage.getItem('token'); // assume token is stored on login
+}
+
+
+
+2️⃣ Create a ProtectedRoute Component:
+
+// ProtectedRoute.jsx
+
+import { Navigate } from 'react-router-dom';
+import { isAuthenticated } from './auth';
+
+const ProtectedRoute = ({ children }) => {
+  if (!isAuthenticated()) {
+    return <Navigate to="/login" replace />;
+  }
+  return children;
+};
+
+export default ProtectedRoute;
+
+
+3️⃣ Set Up Routes with Protection:
+
+// App.jsx or Routes.jsx
+import { Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./ProtectedRoute";
+import Login from "./Login";
+import Dashboard from "./Dashboard";
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/login" element={<Login />} />
+
+      {/* Protected Route for Dashboard */}
+      <Route 
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  );
+}
+
+| Component           | Purpose                                                   |
+| ------------------- | --------------------------------------------------------- |
+| `isAuthenticated()` | Checks if user is logged in (you can improve this logic). |
+| `ProtectedRoute`    | Checks auth → if no access, **redirects to `/login`**.    |
+| `Navigate`          | Used for redirecting to login page.                       |
+
+
+I’ll create a ProtectedRoute wrapper that checks if the user is authenticated (like checking localStorage or context). If not, I’ll use <Navigate /> to redirect to /login. I’ll wrap all sensitive routes inside this ProtectedRoute in the router config.
+
+
+
+
+
+
+10. What is lazy loading in routing? How can you implement code-splitting using React.lazy() with React Router?
+
+Lazy loading means loading components only when needed, not all at once.
+This improves performance by reducing the initial bundle size.
+React provides React.lazy() and Suspense for component-level code splitting.
+In routing, we combine React.lazy() with React Router so that each route loads its component only when the user navigates to that route.
+
+
+🛠️ Hands-on Example
+Let’s say you have 3 components: Home, About, Contact.
+
+
+✅ 1. Lazy Import the Components
+
+import React, { lazy, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+// Lazy loaded components
+const Home = lazy(() => import('./Home'));
+const About = lazy(() => import('./About'));
+const Contact = lazy(() => import('./Contact'));
+
+
+
+✅ 2. Wrap Routes with <Suspense>
+
+function App() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Suspense>
+  );
+}
+
+
+| Feature        | Purpose                                                                        |
+| -------------- | ------------------------------------------------------------------------------ |
+| `React.lazy()` | Tells React to **split** the component into a separate chunk (code-split).     |
+| `Suspense`     | Shows a **fallback (like a spinner)** while the component is being downloaded. |
+| `React Router` | When user navigates to a route, that specific component is loaded.             |
+
+
+
+
+
+
+
+
+
+
+
+
+
+11. How does React Router handle browser navigation — back/forward buttons or refresh?
+
+React Router uses the browser's History API to handle back/forward buttons without full reloads. On refresh, it reads the URL and renders the right component.
+
+On refresh, it reads the current URL and renders the matching route component.
+
+| Action               | React Router Behavior                                                         |
+| -------------------- | ----------------------------------------------------------------------------- |
+| 🔙 Back / 🔜 Forward | React Router **detects the URL change** and re-renders the correct component. |
+| 🔁 Refresh           | It reads the **current URL**, and renders the matching `<Route>`.             |
+| 🧭 Manual URL entry  | Works the same — the Router **resolves the path** and renders.                |
+
+
+✅ Browser Navigation:
+
+When the user clicks back or forward:
+React Router sees the URL change (e.g. /about ➝ /) and renders the right component.
+
+When the user refreshes:
+React Router reads the current URL from the address bar and renders the appropriate route.
+
+
+
+
+
+
+
+
+
+12. Can you explain relative vs absolute routing? How does . or .. in path affect nested routes?
+
+
+Absolute routing starts from the root (/) and ignores the parent route.
+Relative routing is based on the current route level.
+Using relative paths in nested routes ensures correct layout rendering via <Outlet />.
+In navigation, . refers to current route and .. goes one level up — just like file system paths.
+
+
+🧩 How . and .. Work in Paths (Relative Navigation)
+
+
+. – Current path
+Navigates within the current route.
+Often used with <Link to="./settings" /> or navigate('./settings')
+
+
+.. – Go up one level
+Navigates to the parent route.
+Example: from /dashboard/profile to /dashboard
+
+<Link to="settings">Settings</Link>      // relative to current path
+<Link to="../">Go Back</Link>           // go to parent route
+<Link to="/home">Home</Link>            // absolute path

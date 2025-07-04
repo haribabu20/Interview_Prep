@@ -32,8 +32,7 @@ What challenges did you face while making it reusable?
 8. Can you explain how you configured Webpack and Babel in your React projects? What optimizations did you apply for production builds?
 
 
-9. How do you ensure code quality and visual consistency across browsers and screen sizes?
-  Mention manual testing, browser dev tools, responsive design principles, and tools like Lighthouse.
+9. how you check the performance of your application ? 
 
 
 
@@ -830,9 +829,6 @@ I ensured a responsive, smooth, and optimized UI using TailwindCSS utilities, Fl
 
 
 
-
-
-
 10. Image Optimization:
 
 "In our project, image optimization was not a major focus area since we mainly dealt with dashboards, forms, and data tables — but I did implement a few good practices in one of the squads where image handling was slightly involved. they are,
@@ -844,6 +840,11 @@ I ensured a responsive, smooth, and optimized UI using TailwindCSS utilities, Fl
   Wherever possible, I preferred using WebP format over traditional JPEG or PNG because of its smaller file size and efficient compression.
 
 Since our app didn’t handle large or media-heavy content, deeper optimization like CDN image processing or placeholders wasn’t much required."_
+
+
+
+
+**********************************************************************************************************************************************************************
 
 
 

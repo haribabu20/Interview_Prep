@@ -37,3 +37,10 @@ const findSecondMinMax = (arr) => {
 }
 
 console.log(findSecondMinMax([5, 2, 8, 6, 1, 9, 3]));
+
+
+/*
+
+line 27, i gave else if instead of "if" condition. it should be " it " condition
+
+*/

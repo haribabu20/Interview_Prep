@@ -17,5 +17,13 @@ console.log(reverseNumber(123456));
 
 
 /*
+
+mistakes:
+
+make sure that you are not including accumulator term in rev !!
+
+
 Concept for this question and the previous one -> "sum of all the digits in a number" remains same, except for one line.
+
+
 */

@@ -27,7 +27,6 @@ const InfoCard = ({ title, description }) => {
 export default InfoCard;
 
 
-
 ✅ Usage Example (Responsive Grid Layout)
 
 import { Grid, Container } from '@mui/material';
@@ -531,10 +530,6 @@ MUI’s <Grid container> and <Grid item> components follow a 12-column responsiv
   </Grid>
 
 This layout stacks on mobile and becomes two columns on tablets and up.
-
-
-
-
 
 
 

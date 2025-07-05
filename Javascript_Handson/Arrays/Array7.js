@@ -31,6 +31,7 @@ console.log(getUniqueObjects(arr))
 
 mistake:
 1. forgot to include return statement inside and outside if condition
+2. forgot to give as obj.name, instead i'm giving as obj
 
 
 

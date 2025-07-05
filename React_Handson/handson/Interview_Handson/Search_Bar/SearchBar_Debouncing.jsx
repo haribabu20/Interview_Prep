@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from 'react';
 
 const Parent = () => {
   const cityName = [
@@ -12,8 +12,19 @@ const Parent = () => {
     'Vrindavan'
   ];
 
-  const [searchValue, setSearchValue] = useState('');  
+  const [inputValue, setInputValue] = useState('');
+  const [searchValue, setSearchValue] = useState('');
 
+  // Debounce effect
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setSearchValue(inputValue);
+    }, 300); // 300ms debounce delay
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [inputValue]);
 
   const filteredCities = cityName.filter((city) =>
     city.toLowerCase().includes(searchValue.toLowerCase())
@@ -24,8 +35,8 @@ const Parent = () => {
       <input
         type='text'
         placeholder='Search cities...'
-        value={searchValue}
-        onChange={(e) => setSearchValue(e.target.value)}
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
       />
 
       <ul>
@@ -38,25 +49,3 @@ const Parent = () => {
 };
 
 export default Parent;
-
-
-/*
-
-1. Routes Setup
-<Route path='/' element={<About/>}>  <Route/>
-<Route path='/user/:id' element={<About/>}>  <Route/>
-
-
-2. Navigation to dynamic route
-<nav>
-  <Link to='/user/101'> User 101 <Link/>
-  <Link to='/user/102'> User 102 <Link/>
-<nav/>
-
-
-3. Using useParams
- = userparams()
-
-
-
-*/

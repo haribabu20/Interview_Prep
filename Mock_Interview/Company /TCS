@@ -1,0 +1,53 @@
+
+26/04/25 - walkin
+
+1. what challenges you faced in your company
+2. what is useParam
+3. unit test case
+4. virtual DOM
+5. Git and github
+6. webpack and babel
+7. Complete process from clicking the url button to displaying the content in UI page
+8. forEach and map
+9. how can you sort an array.
+10. where you'll pass the paramater for link. -> detail about rounting
+11. fetch data and render it in table. Then sort the column
+12. consider array of 10 values. When i given one as input, then output should be [2,3,4,....10,1]. If i give value as 4, then output --> [5,6,7,...,1,2,3,4]
+
+
+
+
+
+21/06/25 - walkin
+
+1. what is JSX
+2. virtual DOM
+3. how you ensure that your request is secured.
+4. what is state and props
+
+
+
+
+
+04/07/2025
+
+1. Tell me about yourself
+2. any experience in JEST
+3. any experience in Redux
+4. How you'll debug your application, any tools used ?
+5. What are middleware.
+6. what hooks can we use in if/else statement
+7. how you optimize your code.
+8. how you'll do the code splitting in your application
+9. which will console first, promise or setTimeout() --> event loop
+10. Explain in detail about the webpack and babel 
+11. Explain about the Virtual DOM
+12. Any experience in redux saga ? 
+13. What is useReducer
+14. I have three promises. How can I get and print the result of the first one that gets resolved, regardless of the order they were created in?" --> [race]
+15. Throttling and Debouncing
+16. what is pure function ? can we write pure function inside hook ?
+17. have you used any custom hook in your project.
+18. what security you implement in your application ? --> JWT
+19. duplicate array handson for js
+

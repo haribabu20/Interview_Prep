@@ -24,3 +24,10 @@ const reverseSentence = (sentence) => {
 
 
 console.log(reverseSentence('Iee am learning React'));
+
+
+/*
+
+Mistake: Do not use accumulator function in linr 12
+
+*/

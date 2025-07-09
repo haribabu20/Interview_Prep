@@ -1,0 +1,12 @@
+
+
+1. I just implemented useCallback() hooks for memoizing / caching the whole function to stop the re rendering. But it still rerendering. After analysing i came to know that this useCallback() hook will only work if that child component is memoized, i.e it should be wrapped with React.memo.
+  Bug and challenges faced:
+
+
+2. I Have introduced debouncing concept whereever it is required for optimization.
+  New feature you introduced:
+
+
+3. We'll start our work by having a mock api with us to process our work. Then backend team will give us the API endpoint. 
+  Work progress:

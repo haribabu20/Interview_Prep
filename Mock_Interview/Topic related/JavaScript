@@ -1,0 +1,147 @@
+
+
+Javascript InBuilt Methods:
+
+
+🔹 1. Methods that work on both Strings & Arrays
+
+| Method           | Description                             | Example                                                                    |
+| ---------------- | --------------------------------------- | -------------------------------------------------------------------------- |
+| `.length`        | Returns count of elements/characters    | `"abc".length // 3` & `[1,2,3].length // 3`                                |
+| `.indexOf()`     | First index of match                    | `"banana".indexOf("na") // 2` & `[1,2,3,2].indexOf(2) // 1`                |
+| `.lastIndexOf()` | Last index of match                     | `"banana".lastIndexOf("na") // 4` & `[1,2,3,2].lastIndexOf(2) // 3`        |
+| `.includes()`    | Checks if exists                        | `"cat".includes("a") // true` & `[1,2,3].includes(2) // true`              |
+| `.slice()`       | Extracts part without changing original | `"hello".slice(1,4) // "ell"` & `[1,2,3,4].slice(1,3) // [2,3]`            |
+| `.concat()`      | Joins two or more                       | `"Hi".concat(" there") // "Hi there"` & `[1,2].concat([3,4]) // [1,2,3,4]` |
+| `.toString()`    | Converts to string                      | `(123).toString() // "123"` & `[1,2].toString() // "1,2"`                  |
+
+
+
+
+
+🔹 2. String Methods
+
+
+| Method                   | Description                                     | Example                                                    |
+| ------------------------ | ----------------------------------------------- | ---------------------------------------------------------- |
+| `.charAt()`              | Returns character at index                      | `"Hello".charAt(1) // "e"`                                 |
+| `.charCodeAt()`          | Unicode of char at index                        | `"A".charCodeAt(0) // 65`                                  |
+| `.at()`                  | Character at position (supports negative index) | `"Hello".at(-1) // "o"`                                    |
+| `.split()`               | Splits into array                               | `"a,b,c".split(",") // ["a","b","c"]`                      |
+| `.startsWith()`          | Checks start                                    | `"Hello".startsWith("He") // true`                         |
+| `.endsWith()`            | Checks end                                      | `"Hello".endsWith("lo") // true`                           |
+| `.toUpperCase()`         | Uppercase                                       | `"hi".toUpperCase() // "HI"`                               |
+| `.toLowerCase()`         | Lowercase                                       | `"HI".toLowerCase() // "hi"`                               |
+| `.trim()`                | Removes spaces                                  | `" hi ".trim() // "hi"`                                    |
+| `.repeat()`              | Repeats string                                  | `"ha".repeat(3) // "hahaha"`                               |
+| `.replace()`             | Replace first match                             | `"apple".replace("p","x") // "axple"`                      |
+| `.replaceAll()`          | Replace all matches                             | `"apple".replaceAll("p","x") // "axxle"`                   |
+| `.match()`               | Returns matches (regex)                         | `"abc123".match(/\d+/) // ["123"]`                         |
+| `.matchAll()`            | All matches as iterator                         | `[... "abc123abc".matchAll(/abc/g)] // [["abc"], ["abc"]]` |
+| `.padStart()`            | Pads at start                                   | `"5".padStart(3,"0") // "005"`                             |
+| `.padEnd()`              | Pads at end                                     | `"5".padEnd(3,"0") // "500"`                               |
+| `.substring()`           | Extracts between indexes                        | `"hello".substring(1,4) // "ell"`                          |
+| `.substr()` (deprecated) | Extracts from index with length                 | `"hello".substr(1,3) // "ell"`                             |
+
+
+
+
+
+
+🔹 3. Array Methods
+
+
+
+| Method          | Description                      | Example                                  |
+| --------------- | -------------------------------- | ---------------------------------------- |
+| `.push()`       | Add to end                       | `let a=[1]; a.push(2); // [1,2]`         |
+| `.pop()`        | Remove from end                  | `let a=[1,2]; a.pop(); // [1]`           |
+| `.shift()`      | Remove from start                | `let a=[1,2]; a.shift(); // [2]`         |
+| `.unshift()`    | Add to start                     | `let a=[2]; a.unshift(1); // [1,2]`      |
+| `.reverse()`    | Reverse array                    | `[1,2,3].reverse() // [3,2,1]`           |
+| `.sort()`       | Sort array                       | `[3,1,2].sort() // [1,2,3]`              |
+| `.join()`       | Join into string                 | `[1,2,3].join("-") // "1-2-3"`           |
+| `.map()`        | Transform each element           | `[1,2,3].map(x=>x*2) // [2,4,6]`         |
+| `.filter()`     | Keep elements that pass test     | `[1,2,3].filter(x=>x>1) // [2,3]`        |
+| `.reduce()`     | Reduce to single value           | `[1,2,3].reduce((a,b)=>a+b,0) // 6`      |
+| `.find()`       | First element matching condition | `[1,2,3].find(x=>x>1) // 2`              |
+| `.findIndex()`  | Index of first match             | `[1,2,3].findIndex(x=>x>1) // 1`         |
+| `.some()`       | Any element matches              | `[1,2,3].some(x=>x>2) // true`           |
+| `.every()`      | All elements match               | `[1,2,3].every(x=>x>0) // true`          |
+| `.flat()`       | Flattens nested arrays           | `[1,[2,3]].flat() // [1,2,3]`            |
+| `.flatMap()`    | Map + flatten                    | `[1,2].flatMap(x=>[x,x*2]) // [1,2,2,4]` |
+| `.fill()`       | Fill array with value            | `[1,2,3].fill(0) // [0,0,0]`             |
+| `.copyWithin()` | Copies part to another position  | `[1,2,3,4].copyWithin(0,2) // [3,4,3,4]` |
+| `.splice()`     | Add/remove elements              | `let a=[1,2,3]; a.splice(1,1); // [1,3]` |
+
+
+
+
+
+🔹 4. Object Methods
+
+
+| Method             | Description                      | Example                                        |
+| ------------------ | -------------------------------- | ---------------------------------------------- |
+| `Object.keys()`    | Array of keys                    | `Object.keys({a:1,b:2}) // ["a","b"]`          |
+| `Object.values()`  | Array of values                  | `Object.values({a:1,b:2}) // [1,2]`            |
+| `Object.entries()` | Array of key-value pairs         | `Object.entries({a:1}) // [["a",1]]`           |
+| `Object.assign()`  | Copy properties                  | `Object.assign({}, {a:1}, {b:2}) // {a:1,b:2}` |
+| `Object.freeze()`  | Make object immutable            | `Object.freeze({a:1})`                         |
+| `Object.seal()`    | Prevent adding/removing props    | `Object.seal({a:1})`                           |
+| `Object.create()`  | Create new object from prototype | `Object.create({x:10})`                        |
+| `Object.hasOwn()`  | Check if key exists              | `Object.hasOwn({a:1},"a") // true`             |
+
+
+
+
+🔹 5. Number Methods
+
+
+| Method                | Description              | Example                                |
+| --------------------- | ------------------------ | -------------------------------------- |
+| `.toFixed()`          | Format with decimals     | `(3.14159).toFixed(2) // "3.14"`       |
+| `.toPrecision()`      | Format with total digits | `(3.14159).toPrecision(3) // "3.14"`   |
+| `.toExponential()`    | Exponential notation     | `(1234).toExponential() // "1.234e+3"` |
+| `Number.isInteger()`  | Check integer            | `Number.isInteger(3) // true`          |
+| `Number.parseInt()`   | Convert to int           | `Number.parseInt("42") // 42`          |
+| `Number.parseFloat()` | Convert to float         | `Number.parseFloat("3.14") // 3.14`    |
+
+
+
+
+
+🔹 6. Math Methods
+
+
+| Method          | Description          | Example                |
+| --------------- | -------------------- | ---------------------- |
+| `Math.abs()`    | Absolute value       | `Math.abs(-5) // 5`    |
+| `Math.round()`  | Round to nearest int | `Math.round(2.5) // 3` |
+| `Math.floor()`  | Round down           | `Math.floor(2.9) // 2` |
+| `Math.ceil()`   | Round up             | `Math.ceil(2.1) // 3`  |
+| `Math.max()`    | Max value            | `Math.max(1,5,3) // 5` |
+| `Math.min()`    | Min value            | `Math.min(1,5,3) // 1` |
+| `Math.random()` | Random 0–1           | `Math.random()`        |
+| `Math.pow()`    | Power                | `Math.pow(2,3) // 8`   |
+| `Math.sqrt()`   | Square root          | `Math.sqrt(9) // 3`    |
+| `Math.trunc()`  | Remove decimals      | `Math.trunc(3.9) // 3` |
+
+
+
+🔹 7. Date Methods
+
+
+| Method                  | Description       | Example                                 |
+| ----------------------- | ----------------- | --------------------------------------- |
+| `new Date()`            | Current date/time | `new Date()`                            |
+| `.getFullYear()`        | Year              | `new Date().getFullYear()`              |
+| `.getMonth()`           | Month (0–11)      | `new Date().getMonth()`                 |
+| `.getDate()`            | Day of month      | `new Date().getDate()`                  |
+| `.getDay()`             | Day of week (0–6) | `new Date().getDay()`                   |
+| `.getHours()`           | Hour              | `new Date().getHours()`                 |
+| `.getMinutes()`         | Minutes           | `new Date().getMinutes()`               |
+| `.getSeconds()`         | Seconds           | `new Date().getSeconds()`               |
+| `.toISOString()`        | ISO string        | `new Date().toISOString()`              |
+| `.toLocaleDateString()` | Local date        | `new Date().toLocaleDateString()`       |
+| `.setFullYear()`        | Set year          | `let d=new Date(); d.setFullYear(2025)` |

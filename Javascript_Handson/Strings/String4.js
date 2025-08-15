@@ -22,3 +22,17 @@ const duplicateCharaceter2 = (word) => {
   return [... new Set(word)].join('')
 }
 console.log(duplicateCharaceter2('programming'));
+
+
+
+
+
+/*
+
+indexOf() and includes() applies for both string and array
+
+instead of 
+
+
+
+*/

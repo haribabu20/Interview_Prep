@@ -15,6 +15,8 @@ const Parent = () => {
   const [inputValue, setInputValue] = useState('');
   const [searchValue, setSearchValue] = useState('');
 
+  
+
   // Debounce effect
   useEffect(() => {
     const handler = setTimeout(() => {

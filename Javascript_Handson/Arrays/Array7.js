@@ -9,21 +9,16 @@ const arr = [
   {name: 'kishore'}
 ]
 
+let uniqueSet = new Set();
 
-const getUniqueObjects = (arr) => {
-  const uniqueSet = new Set();
-  return arr.filter(obj => {
+let originalObj = arr.filter((obj)=>{
     if(!uniqueSet.has(obj.name)){
-      uniqueSet.add(obj.name);
-      return true // elememt will be added in new array only if the return is true.
+        uniqueSet.add(obj.name);
+        return true; 
     }
-    return false;
-  })
-  
-}
+})
 
-
-console.log(getUniqueObjects(arr))
+console.log(originalObj);
 
 
 
@@ -32,6 +27,20 @@ console.log(getUniqueObjects(arr))
 mistake:
 1. forgot to include return statement inside and outside if condition
 2. forgot to give as obj.name, instead i'm giving as obj
+
+
+"Why to use return true in line 17"
+
+  In .filter(), the callback must return a boolean,
+
+  true → keep the element in the new array.
+  false → skip the element.
+
+  If you didn’t write return true here, the function would implicitly return undefined (which is treated as false), meaning even the first time we encounter a name, it would be excluded from the result.
+
+That’s why it’s needed — it’s the explicit “yes, keep it” signal for .filter().
+
+
 
 
 

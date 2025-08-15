@@ -1,6 +1,14 @@
 // 🔥 1️⃣ Reverse a string without using built-in methods.
 
 
+// Inbuilt Method
+
+let word = 'programming';
+const rev = (word) => word.split('').reverse().join('')
+console.log(rev(word))
+
+
+// No InBuilt Method
 
 const reverseString = (str) => {
   let rev = '';

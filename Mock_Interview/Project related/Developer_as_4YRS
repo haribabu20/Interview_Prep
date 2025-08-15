@@ -1,0 +1,61 @@
+
+
+
+Project details
+
+
+First project:
+- Home Loan Application system
+- nearly 1.2 yrs
+- backend nodeJS-expressJS. 
+- automatic deployment - CI/CD team will take care. [push to the respective branches and then automatically ci/cd will build]
+- Libraries:
+    - Redux, context API, material UI, tailwind CSS, axios, react_hook_form, react_window/react_virtualized, rounting, 
+- Manual unit Tesing in my squad
+- Supported Automation tester in doing the regression testing on running the automation script and fixed the issues. I learned about the testing activities like how and what they'll do in there team.
+- Size: 8 - 2 qa including lead | 2 BA | 1 PO | 4 dev including lead
+
+
+
+Second project:
+- Customer compliance management system
+- nearly 2.5+yrs
+- backend - springboot and mysql ----> supported in JPQL quering ---> had basic understanding on how backend works
+- manual deployment using IIS webserver to host the application
+- Libraries:
+  - Redux toolkit, context API, tailwind CSS, axios, react_hook_form, rounting, error boundaries, 
+  - React Tables under implementation
+- Manual unit testing in my squad. 
+- Will do basic sanity aswell like if nothing breaks on introduction of new features
+- Size: 10 - 4 qa including lead | 1 BA | 1 PO | 4 dev including lead
+
+
+  
+
+
+
+
+Works I contributed:
+
+
+
+1. I just implemented useCallback() hooks for memoizing / caching the whole function to stop the re rendering. But it still rerendering. After analysing i came to know that this useCallback() hook will only work if that child component is memoized, i.e it should be wrapped with React.memo 
+  Bug and challenges faced:
+
+
+
+2. I Have introduced debouncing concept whereever it is required for optimization. Later after some months we had implemented useDebounce hook inplace of debouncing code concept.
+  New feature you introduced:
+    
+
+
+3. We'll start our work by having a mock api with us to process our work. Then backend team will give us the API endpoint. 
+  Work progress:
+
+
+
+4. 
+
+
+
+

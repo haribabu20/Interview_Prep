@@ -2,6 +2,30 @@
 
 
 // Approach 1
+
+
+//Normal
+const arr = [1,2,12,0,4,0,0,0,2,2,3,0];
+
+let zero = [];
+let nonZero = [];
+
+for(let i=0; i<arr.length; i++){
+    if(arr[i]===0){
+        zero.push(arr[i]);
+    }else{
+        nonZero.push(arr[i]);
+    }
+}
+
+let original = nonZero.concat(zero);
+
+console.log(original)
+
+
+
+
+//Function
 const moveZeroLast1 = (arr) => {
     let nonZero = [];
     let zero = [];

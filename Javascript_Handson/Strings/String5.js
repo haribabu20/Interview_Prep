@@ -21,6 +21,11 @@ console.log(countCharacters("programming"));
 
 /*
 
+// Mistake:
+
+I used count[word[i]] === 1; 
+
+
 Explanation:
 
 let obj = {};

@@ -5,10 +5,9 @@
 2. what is useParam
 3. unit test case
 4. virtual DOM
-5. Git and github
+5. Git and github`
 6. webpack and babel
-7. Complete process from clicking the url button to displaying the content in UI page
-8. forEach and map
+``8. forEach and map
 9. how can you sort an array.
 10. where you'll pass the paramater for link. -> detail about rounting
 11. fetch data and render it in table. Then sort the column
@@ -18,13 +17,13 @@
 
 
 
-21/06/25 - walkin
 
+21/06/25 - walkin
+`
 1. what is JSX
 2. virtual DOM
 3. how you ensure that your request is secured.
 4. what is state and props
-
 
 
 

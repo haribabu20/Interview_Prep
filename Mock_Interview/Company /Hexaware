@@ -1,0 +1,17 @@
+21/08/2025
+
+1. Introduction
+2. What is redux
+3. what is middleware and name few you used in your project
+4. Explain the work you done in MUI
+5. Explain about the Grid in MUI
+6. You have ASP .net code and need to change to react application. what approach you will be doing.
+7. what is hooks and name few.
+
+
+handson:
+
+1. consider you have a public api --> https://pokeapi.co/api/v2/pokemon  now do the following things,
+--> fetch the data and store it in a MUI Grid as name and button[link to next api]
+--> onclicking the button, it should display another card having the name and button[url] of corresponding api.
+--> like this give me 3 cards to interact

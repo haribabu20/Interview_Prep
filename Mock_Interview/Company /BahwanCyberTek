@@ -1,0 +1,37 @@
+22/08/2025
+
+1. Diff between state and props
+2. What is props drilling
+
+
+handson:
+
+
+1)
+
+how to change the salary in dev from 11000 t0 12000 in JS ?
+  ==> [{ "Test":{ "salary": 10000, }, "Dev":{ "salary": 11000, } }]
+
+
+Ans: 
+
+data = [{
+    "Test": {
+        "salary": 10000,
+    },
+    "Dev": {
+        "salary": 11000,
+    }
+}]
+
+# Update Dev's salary
+data[0]["Dev"]["salary"] = 12000
+
+print(data)
+
+
+
+
+2) 
+
+create a form having 3 fields and store that in a single form object, then on clicking the button, render in UI

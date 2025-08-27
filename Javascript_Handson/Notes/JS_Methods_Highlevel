@@ -1,6 +1,7 @@
 
 
-Javascript InBuilt Methods:
+Javascript all possible methods:
+
 
 
 🔹 1. Methods that work on both Strings & Arrays
@@ -126,6 +127,8 @@ Javascript InBuilt Methods:
 | `Math.pow()`    | Power                | `Math.pow(2,3) // 8`   |
 | `Math.sqrt()`   | Square root          | `Math.sqrt(9) // 3`    |
 | `Math.trunc()`  | Remove decimals      | `Math.trunc(3.9) // 3` |
+
+
 
 
 

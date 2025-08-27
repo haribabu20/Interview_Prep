@@ -3,36 +3,44 @@
 
 
 
-/* 
+
 //1
 console.log('1'+1) // 11 
+
 
 
 //2
 console.log('1'-1) // 0
 console.log('1'-'1') // 0
 console.log(1-'1') // 0
-// The - operator triggers type coercion in JavaScript
-// JavaScript converts '1' to a number → 1
+
+
+
+  The - operator triggers type coercion in JavaScript
+  JavaScript converts '1' to a number → 1
+
 
 
 //3 Hoisting
 a = 10;
 console.log(a); // 10
 var a
-/*
+
+
+
 When JavaScript is executed, all var declarations are hoisted to the top of their scope (but not the assignments).So this code is interpreted like:
     var a;      // declaration is hoisted to the top
     a = 10;     // assignment stays where it is
     console.log(a);  // prints 10
- */
+ 
+
 
 
 // 4
 a = 10;
 console.log(a); // reference error
 // let a      
-/*
+
 
 
 
@@ -43,7 +51,8 @@ console.log(a); // reference error
 
 // React & Javascript theory
 
-/*
+
+
 1. Is react one way data binding or 2 way data binding ?
 
   In one-way data binding, data flows in a single direction — from the parent component to the child component via props.
@@ -274,6 +283,8 @@ You say:
 
 
 
+
+
 21. what is find()
 
   It returns the "first element of array" that passes the specific condition
@@ -287,14 +298,14 @@ You say:
   
   findIndex(): When it comes to findIndex(), we can implement that in same above program. if so the output will be "1"
 
-*/
+
 
 
 
 
 // CSS & HTML
 
-/*
+
 
 1. Selectors in CSS and its priorities
 
@@ -504,6 +515,7 @@ opacity: 0;
 
 
 
+
   9. How can we vertically center a text.
   
   “I usually use Flexbox or Grid to vertically center text, as they are clean and responsive".
@@ -689,7 +701,7 @@ If I want fine control over layout, like putting item 1 in row 2, column 3 — G
 
 
 
-*/
+
 
 
 

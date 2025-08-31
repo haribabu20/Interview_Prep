@@ -1,6 +1,14 @@
 // ✅ 4️⃣ Remove duplicate characters from a string.
 
 
+//Method 2 - with inbuilt method - OPTIMIZED VERSION
+const duplicateCharaceter2 = (word) => {
+  return [... new Set(word)].join('')
+}
+console.log(duplicateCharaceter2('programming'));
+
+
+
 
 //Method 1 - without inbuilt method
 const duplicateCharacter = (word) => {
@@ -14,14 +22,6 @@ const duplicateCharacter = (word) => {
   return originalWord;
 }
 console.log(duplicateCharacter('programming'));
-
-
-
-//Method 2 - with inbuilt method - OPTIMIZED VERSION
-const duplicateCharaceter2 = (word) => {
-  return [... new Set(word)].join('')
-}
-console.log(duplicateCharaceter2('programming'));
 
 
 

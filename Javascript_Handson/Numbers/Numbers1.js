@@ -13,6 +13,8 @@ const factorial1 = (n) => {
 }
 
 
+// here  " i<=n " is important. 
+
 //Method 2 - recursion
 const factorial2 = (n) => {
   if(n===1) return 1;   // Base Case

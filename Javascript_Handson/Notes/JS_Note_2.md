@@ -7,6 +7,8 @@
 4. unshift
 5. splice
 6. slice
+7. reduce
+
 
 
 
@@ -15,6 +17,7 @@
 
 
 NOTE : shift() and pop() will not accept any parameter. If we pass the paramater, then that's of no use. it simply do the same operation of what it does when we gave with no parameter
+
 
 
 // shift
@@ -174,25 +177,40 @@ NOTE : shift() and pop() will not accept any parameter. If we pass the paramater
 
 
 
-// NaN
-
-
-  isNaN("Hi") // true
-
-      it tries to convert the string to number. it is not possible. So it is not a number and hence prints true.
-
-
-  isNaN("123")      // false → can be converted to number
-  isNaN("123abc")   // true → cannot be converted to number
-  isNaN(100)        // false
-  isNaN(NaN)        // true
-  isNaN(console.log(2)) // 2
-
-
-
 
 
 2) Map, filter, reduce these are the HOF
+
+
+
+// reduce
+
+finding longest word in sentence
+
+  const sentences = 'This is gonna be a massives hitsjhbxashbxvasgux';
+  let result = sentence.split(' ').reduce((acc, word) => word.length > acc.length ? word : acc)
+  console.log(result) // hitsjhbxashbxvasgux
+
+/*
+reduce():
+
+here acc will have no values firstly. 'word' will fetch the first element from array.
+
+   - 1st iteration --> acc = '' word = 'This'  --> 4 > 0 true condition. --. now storing 'this' into acc.
+   - 2nd iteration --> acc = 'This' word = 'is'  --> 2 > 4 false condition. 
+   - 3rd iteration --> acc = 'This' word = 'gonna'  --> 5 > 4 true condition. --. now storing 'gonna' into acc.
+
+
+Main ---> if we want to start with ' ' in acc, then as 2nd parameter we can mention the same
+
+*/
+
+
+
+
+
+
+
 
 
 3) First order and Higher order function

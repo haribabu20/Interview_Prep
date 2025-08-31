@@ -2,6 +2,17 @@
 // write js code to sort array of objects by a key and explain
 
 
+/* 
+
+
+Important:
+
+same applicable for character sorting aswell like
+
+const arr = ['z','a','d','b','e'];
+
+*/
+
 
 
 // Bubble Sorting - Ascending and Descending Order

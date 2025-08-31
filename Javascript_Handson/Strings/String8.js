@@ -1,5 +1,17 @@
 // Convert a sentence into an acronym (e.g., "National Aeronautics Space Administration" → "NASA").
 
+
+// Inbuilt:
+
+const sentence = "National Aeronautics Space Administration"
+const result = sentence.split(' ').map((word) => word[0].toUpperCase()).join('');
+console.log(result)
+
+
+
+
+// without inbuilt:
+
 const toAcronym = (sentence) => {
   let word = '';
   let acronym = '';

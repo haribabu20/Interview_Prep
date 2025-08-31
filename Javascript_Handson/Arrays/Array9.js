@@ -16,8 +16,12 @@ const flattenArray = (arr) => {
 
 console.log(flattenArray([1, [2, 3], [4, [5, 6]], 7]));
 
-// mistake: haven't assigned flatArr in line 8 for flatArr.concat() line
+/*
 
+mistake: 
+- haven't assigned flatArr in line 8 for flatArr.concat() line
+- make sure to declare the flatArr variable inside the function, else it shows unexpected output
+*/
 
 
 // Method 2:

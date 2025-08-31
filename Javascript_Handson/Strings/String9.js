@@ -3,6 +3,18 @@
 // O/P: React learning am I
 
 
+
+// Inbuilt:
+
+
+const sentence = "I am learning React"
+let rev = sentence.split(' ').reduce((acc, w) => (acc ? (w + " " + acc) : w))
+console.log(rev)
+
+
+
+// Without inbuilt
+
 const reverseSentence = (sentence) => {
   let word = '';
   let temp = '';

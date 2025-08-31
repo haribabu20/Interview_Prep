@@ -1,34 +1,26 @@
 //🔥 3️⃣ Find the longest word in a sentence.
 
 
+// 3 diff ways 🔥 
+
 
 // Approach 1: Inbuilt method:
 
 
 const sentences = 'This is gonna be a massives hitsjhbxashbxvasgux';
-let max = sentences.split(' ').reduce((a,b) => b.length > a.length ? b : a);
-console.log(max) // hitsjhbxashbxvasgux
-
+let result = sentence.split(' ').reduce((acc, word) => word.length > acc.length ? word : acc)
+console.log(result) // hitsjhbxashbxvasgux
 
 /*
+reduce():
 
-1️⃣ sentence.split(' ')
-
-"This is gonna be a massives hitsjhbxashbxvasgux"
-→ ["This", "is", "gonna", "be", "a", "massives", "hitsjhbxashbxvasgux"]
-
-
-
-2️⃣ .reduce((a, b) => b.length > a.length ? b : a)
-
-Important:
-      reduce() takes the array and reduces it to one value by applying a callback repeatedly.
-      a → the “accumulator” (what we’re keeping as the current “winner” so far)
-      b → the “current” word being compared
+here acc will have no values firstly. 'word' will fetch the first element from array.
+1st iteration --> acc = '' word = 'This'  --> 4 > 0 true condition. --. now storing 'this' into acc.
+2nd iteration --> acc = 'This' word = 'is'  --> 2 > 4 false condition. 
+3rd iteration --> acc = 'This' word = 'gonna'  --> 5 > 4 true condition. --. now storing 'gonna' into acc.
 
 
-b.length > a.length ? b : a   
-  ----> If the current word (b) is longer than the longest so far (a), replace a with b. Otherwise, keep a.
+Main ---> if we want to start with ' ' in acc, then as 2nd parameter we can mention the same
 
 */
 
@@ -65,30 +57,32 @@ console.log(maxLength('This is gonna be a massivessss hitsjhbxashbxvasgux'));
 // Approach 3: Without using inbuilt method:
 
 
-const sentence = 'This is gonna be a massives hitsjhbxashbxvasgux';
-
-let word = '';
-
-let maxLengthh = 0;
-let maxWordd = '';
 
 
-for(let i=0; i<sentence.length; i++){
-    if(sentence[i] === ' '){
-        if(word.length>maxLengthh){
-            maxLengthh = word.length;
-            maxWordd = word
+const sentence = "This is a massive hit of the year"
+
+function longestWord (sentence) {
+    
+    let word = '';
+    let maxWord = '';
+    
+    for(let i=0; i<sentence.length; i++){
+        if(sentence[i] === ' '){
+            if(word.length > maxWord.length){
+                maxWord = word;
+            }
+            word = '';
+        }else{
+            word += sentence[i];
         }
-        word='';
-    }else{
-        word += sentence[i];
     }
+    
+    // check the last word (since no space comes after it)
+    if(word.length > maxWord.length){
+        maxWord = word
+    }
+    
+    return `Max word in sentence: ${maxWord}`
 }
 
-if(word.length>maxLengthh){
-    maxLengthh = word.length;
-    maxWordd = word
-}
-
-
-console.log(maxWordd)
+console.log(longestWord(sentence))

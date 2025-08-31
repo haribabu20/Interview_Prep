@@ -26,7 +26,7 @@ console.log(originalObj);
 
 mistake:
 1. forgot to include return statement inside and outside if condition
-2. forgot to give as obj.name, instead i'm giving as obj
+2. made more than 2 times this mistake ---> forgot to give as obj.name, instead i'm giving as obj  
 
 
 "Why to use return true in line 17"

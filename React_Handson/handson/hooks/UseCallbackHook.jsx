@@ -1,12 +1,26 @@
 
 /*
 
+
+✅ useCallback
+
+What it does: Memoizes a function reference, so the function is not recreated on every render unless its dependencies change.
+Why: Useful when passing functions as props to child components to prevent unnecessary re-renders.
+Simple definition (interview-friendly):
+👉 "useCallback returns a memoized function reference."
+
+
+
 "useCallback is a React Hook that memoizes a function.
 It returns the same function reference across renders unless the dependencies change.
 It's mainly used to prevent unnecessary re-renders of child components that rely on function props."
 
+
+
 "In React, functions are recreated on every render. So if we pass a function as a prop to a memoized child (React.memo), that child may re-render even if nothing has changed — just because the function reference changed.
 useCallback solves that by returning the same function reference unless its dependencies actually change."
+
+
 
 
 My Explanation:

@@ -3,6 +3,11 @@
 
 action   ->    object   ->  {type:"increment"}
 
+To keep in mind:
+  - make sure to give as {state.count} in render
+  - count: state.count + 1
+  - switch case syntax
+
 
 */
 

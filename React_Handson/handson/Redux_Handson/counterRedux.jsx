@@ -28,7 +28,7 @@ function restockCake(num){
     payload: num
   }
 }
-
+s
 
 // Reducer
 const reducer = (state = initialState, action) => {

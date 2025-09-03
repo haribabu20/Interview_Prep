@@ -1,112 +1,78 @@
-import { useState } from "react";
+import {useState} from 'react'
 
-const FormPractice = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-  });
+const App = () => {
 
-  const [error, setError] = useState({});
-  const [successMessage, setSuccessMessage] = useState("");
-
-  const validationForm = () => {
-    let newErrors = {};
-
-    if (!formData.name) {
-      newErrors.name = "Name is required";
-    }
-
-    if (!formData.email) {
-      newErrors.email = "Email ID is required";
-    }
-
-    if (formData.password.length < 6) {
-      newErrors.password = "Password should be more than 6 characters";
-    }
-
-    setError(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value
-    }));
-
-    setError((prevErrors) => ({
-      ...prevErrors,
-      [name]: ''
-    }));
-    setSuccessMessage('');
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (validationForm()) {
-      setSuccessMessage("Form Submitted Successfully!!!");
-      console.log(formData);
-
-      setFormData({
-        name: '',
-        email: '',
+    const [formData, setFormData] = useState({
+        username: '',
         password: '',
-      });
+        number: '',
+    })
 
-      setError({});
+    const [submittedForm, setSubmittedForm] = useState(null)
+
+    const handleChange = (e) => {
+        const {name, value} = e.target
+        setFormData({
+            ...formData,
+            [name]: value
+        })
     }
-  };
 
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSubmittedForm(formData)
+    }
+    
+    
+    return (
+        <>
+            <h1>User Details</h1>
+            <form onSubmit={handleSubmit}>
+                
+                <div>
+                    <label htmlFor="username">Username</label>
+                    <input
+                        id="username"
+                        type="text"
+                        name="username"
+                        onChange={handleChange}
+                        ></input>
+                </div>
 
-        {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
+                <div>
+                    <label htmlFor="password">Password</label>
+                    <input
+                        id="password"
+                        type="password"
+                        name="password"            
+                        onChange={handleChange}                        
+                        ></input>
+                </div>
 
-        <div>
-          <label htmlFor="name">Name:</label><br />
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          {error.name && <p style={{ color: "red" }}>{error.name}</p>}
-        </div>
+                 <div>
+                    <label htmlFor="number">Mobile Number</label>
+                    <input
+                        id="number"
+                        type="tel"
+                        name="number"     
+                        onChange={handleChange}
+                        ></input>
+                </div>
 
-        <div>
-          <label htmlFor="email">Email:</label><br />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          {error.email && <p style={{ color: "red" }}>{error.email}</p>}
-        </div>
+                <button type="submit">Submit</button>
 
-        <div>
-          <label htmlFor="password">Password:</label><br />
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-          />
-          {error.password && <p style={{ color: "red" }}>{error.password}</p>}
-        </div>
+                {submittedForm && (
+                    <div>
+                          <h2>Submitted Data:</h2>
+                          <p>Username: {submittedForm.username}</p>
+                          <p>Password: {submittedForm.password}</p>
+                          <p>Mobile: {submittedForm.number}</p>
+                    </div>
+                )}
+                
+            </form>
+        </>
+    )
+}
 
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  );
-};
-
-export default FormPractice;
+export default App

@@ -5,13 +5,13 @@ handson to practise:
 
 1. 
 
-let str='This is simple string' 
+'let str='This is simple string' 
 
 output: 
   This 
   is
   simple 
-  string
+  string'
 
 
 2. ['a', 'b', 'c', 'd', 'e', 'a',]
@@ -143,9 +143,9 @@ Explanation:
 
 In the first loop, let is block-scoped, while in the second loop, var is function-scoped. This difference affects how i is captured inside the setTimeout callbacks.
 
-If it is block scope, then for each iteration, a new instance of i is created. So when the timeout executes after 1 second, it prints the value of i at that time. so it prints 0, 1, 2, 3, 4.
+If it is block scope, then for each iteration, "a new instance of i is created. So when the timeout executes after 1 second", it prints the value of i at that time. so it prints 0, 1, 2, 3, 4.
 
-In the second loop, var is function-scoped, meaning that there is only one instance of i shared across all iterations. By the time the setTimeout callbacks execute after 1 second, the loop has already completed, and i is now 5. So it prints 5 five times.
+In the second loop, var is function-scoped, meaning that there is "only one instance of i shared across all iterations". By the time the setTimeout callbacks execute after 1 second, the loop has already completed, and i is now 5. So it prints 5 five times.
 
    - on start of the loop, var i = 0 → JS declares i in function/global scope
    - First iteration, i=0, setTimeout(...) is scheduled to run in 1 second.
@@ -220,18 +220,21 @@ const factorial2 = (n) => {
     4. Object.assign()
 
     Example for Object Literal:
+
       let person = {
         name: 'John',
         age: 30,
       }
 
     Example for Constructor Function:
+
       let userDetails = new Object();
       userDetails.name = 'John';
       userDetails.age = 30;
 
 
     Example for Object.create():
+
       let animal = {
         name: 'Animal name',
       }
@@ -239,6 +242,7 @@ const factorial2 = (n) => {
 
 
     Example for Object.assign():
+    
       let obj1 = { name: 'John' };
       let obj2 = { age: 30 };
       let mergedObj = Object.assign({}, obj1, obj2);

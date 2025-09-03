@@ -1,3 +1,9 @@
+
+// Have a look onto react handson question - 1 [searching fruits]
+
+
+
+
 function Customer({ num }) {
   let squared = useMemo(() => {
     return num * num;

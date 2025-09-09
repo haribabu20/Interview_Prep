@@ -44,3 +44,5 @@
 19. say you have an api, and instead of calling it all the time the api in all components, how can you reuse those
 20. lifting state up
 21. what is props drilling. What methods we use to avoid props drilling ?
+22. how can we persist the datas in your react application on any page refresh ? - local storage and session storage
+23. What is virtualisation list in react JS

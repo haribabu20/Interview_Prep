@@ -29,6 +29,17 @@ Debouncing:
 Debouncing is a technique where we delay the function execution (like API call) until a certain time (like 500ms) after the last event (like keystroke). 💯🔥
 👉 If the user keeps typing, the timer resets again. 🚀
 
+Every time the user types (input event), you:
+
+clearTimeout(timer) → cancel the previous scheduled execution.
+setTimeout(...) → start a new timer.
+Only if the user stops typing for 2000ms (2s), the callback executes and you trigger your "API call".
+If the user types before 2s, the timer resets again → delaying execution.
+That’s exactly debouncing ✅
+
+
+
+
 Throttling:
 
 Throttling is a technique where we allow the function (like API call) to execute only ONCE in a fixed time interval (like every 2 seconds) no matter how many times the event occurs. 

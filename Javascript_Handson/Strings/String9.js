@@ -12,6 +12,13 @@ let rev = sentence.split(' ').reduce((acc, w) => (acc ? (w + " " + acc) : w))
 console.log(rev)
 
 
+// (or)
+
+const sentence1 = "I am learning React"
+const result = sentence1.split(' ').reverse().join(' ')
+console.log(result)
+
+
 
 // Without inbuilt
 

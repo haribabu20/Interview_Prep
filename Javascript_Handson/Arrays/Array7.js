@@ -14,7 +14,7 @@ let uniqueSet = new Set();
 let originalObj = arr.filter((obj)=>{
     if(!uniqueSet.has(obj.name)){
         uniqueSet.add(obj.name);
-        return true; 
+        return true;  // important !!!!
     }
 })
 
@@ -26,7 +26,7 @@ console.log(originalObj);
 
 mistake:
 1. forgot to include return statement inside and outside if condition
-2. made more than 2 times this mistake ---> forgot to give as obj.name, instead i'm giving as obj  
+2. made more than 3 times this mistake ---> forgot to give as obj.name, instead i'm giving as obj  
 
 
 "Why to use return true in line 17"

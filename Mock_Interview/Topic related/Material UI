@@ -467,6 +467,7 @@ function App() {
 }
 
 
+
 | Feature            | `sx` Prop                     | `makeStyles`              |
 | ------------------ | ----------------------------- | ------------------------- |
 | Introduced in      | MUI v5                        | MUI v4                    |

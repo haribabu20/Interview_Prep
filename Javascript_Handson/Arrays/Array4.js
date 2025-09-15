@@ -23,6 +23,12 @@ console.log(maximumCount1([1,1,0,0,1,0,1,1,1,0,1,1,1,1,1]));
 
 /*
 
+mistake:
+
+1) included count++ at line 11.
+
+
+
 line 9 can also be written as
 if(count>maxCount){
 maxCount=count;

@@ -15,7 +15,7 @@ const duplicateCharacter = (word) => {
   let arr = word.split('');
   let originalWord = '';
   for(let i=0; i<arr.length; i++){
-    if(originalWord.indexOf(arr[i])===-1){
+    if(!originalWord.includes(arr[i])){
       originalWord += arr[i];
     }
   }

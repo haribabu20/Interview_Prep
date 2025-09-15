@@ -22,6 +22,7 @@ JS:
 10. await and yeild differences ?
 11. What is BOM and explain its hierarchy
 12. How to avoid mutating an array when performing an operations
+13. diff btw es6 and es5
 
 
 
@@ -56,11 +57,13 @@ React:
 23. When a response is sent from server to browser, what gets loaded first ? html or css or JS ? 
 24. What is functional setState ? 
 25. why shouldn'r we update the state directly ?
-26.   How will you chain multiple API calls that is depending on previous request ?
+26. How will you chain multiple API calls that is depending on previous request ?
 27. SPA and MPA diff
-28.   HTTP request lifecycle ?
-29.   How can we persist the datas in your react application on any page refresh ?
+28. HTTP request lifecycle ?
+29. How can we persist the datas in your react application on any page refresh ?
 30. Thunk vs Saga
+31. about jwt token
+32. what is renderw
 
 
 1 + "2", [..."sandip"], {} === {} / {} == {}
@@ -104,6 +107,3 @@ manager round in vs code and notes
 
 
 
-Answers:
-
-1.

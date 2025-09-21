@@ -25,7 +25,8 @@ console.log(maximumCount1([1,1,0,0,1,0,1,1,1,0,1,1,1,1,1]));
 
 mistake:
 
-1) included count++ at line 11.
+1) make sure you increment first and then you apply the condition for checking the maxCount of 1.
+  i.e --> included count++ at line 11.
 
 
 

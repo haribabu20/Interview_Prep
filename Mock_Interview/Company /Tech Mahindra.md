@@ -1,5 +1,5 @@
 
-02/09/2025
+02/09/2025 - technical interview
 
 1. Introduction
 2. Closures
@@ -46,3 +46,21 @@
 21. what is props drilling. What methods we use to avoid props drilling ?
 22. how can we persist the datas in your react application on any page refresh ? - local storage and session storage
 23. What is virtualisation list in react JS
+
+
+
+
+
+15/09/2025 - client interview
+
+1. Introduction
+2. what is lazy loading and how it is used in optimisation
+3. consider you have wide range of user data and you plan to include only 10 user details. how ? -- [cannot even understand the qn they asked]
+4. what is redux
+5. useContext, useState, useRef
+6. what are all hook available in redux
+7. what is the adv of rtk over redux
+8. consider you have 10 csv file to upload and in return you need only 1 enhanced file. how can you acheive this ?
+9. how can you make sure that the component is not re rendered
+10. I/P = ['name','country','people']. --> O/P = ['Name','Country','People']
+11. I/P ---> arr1 = ['ball','bat','catch'], arr2 = ['ball','bat']  O/P ---> ['catch']

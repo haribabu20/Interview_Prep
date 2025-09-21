@@ -11,6 +11,7 @@ import {
 
 import api from '@/api';
 
+//1
 const AuthContext = createContext(undefined);
 
 
@@ -27,7 +28,7 @@ export const useAuth = () => {
 
 
 
-
+//2
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(null);
 
